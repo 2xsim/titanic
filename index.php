@@ -45,6 +45,10 @@
                 }
             </style> 
 
+            <?php 
+                include "includes/navbar.html";
+            ?>
+
             <!-- Background image -->
             <div id="intro" class="bg-image shadow-2-strong">
                 <div
@@ -57,6 +61,9 @@
                                 <form
                                     class="bg-white rounded shadow-5-strong p-5"
                                 >
+                                <h3 class="card-title">Dépêchez-vous !</h3>
+    <h6 class="card-subtitle mb-2 text-muted">Vous avez raté tellement de choses</h6>
+    <br>
                                     <!-- Email input -->
                                     <div class="form-outline mb-4">
                                         <input
@@ -67,7 +74,7 @@
                                         <label
                                             class="form-label"
                                             for="form1Example1"
-                                            >Email address</label
+                                            >Adresse e-mail</label
                                         >
                                     </div>
 
@@ -81,7 +88,7 @@
                                         <label
                                             class="form-label"
                                             for="form1Example2"
-                                            >Password</label
+                                            >Mot de passe</label
                                         >
                                     </div>
 
@@ -103,14 +110,14 @@
                                                     class="form-check-label"
                                                     for="form1Example3"
                                                 >
-                                                    Remember me
+                                                    Se souvenir
                                                 </label>
                                             </div>
                                         </div>
 
                                         <div class="col text-center">
                                             <!-- Simple link -->
-                                            <a href="#!">Forgot password?</a>
+                                            <a href="#!">Mot de passe oublié ?</a>
                                         </div>
                                     </div>
 
@@ -119,7 +126,7 @@
                                         type="submit"
                                         class="btn btn-primary btn-block"
                                     >
-                                        Sign in
+                                        Se connecter
                                     </button>
                                 </form>
                             </div>
@@ -132,6 +139,9 @@
         <!--Main Navigation-->
 
         <!-- MDB -->
-        <script type="text/javascript" src="js/mdb.min.js"></script>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+></script>
     </body>
 </html>
