@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>WeMeet - Connexion</title>
+    <title>Titanic - Inscription</title>
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
@@ -43,13 +43,13 @@
                                 <div class="accordion accordion-flush" id="accordionFlushExample">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="flush-headingOne">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-mdb-toggle="collapse" data-mdb-target="#flush-collapseOne"
-                                                aria-expanded="false" aria-controls="flush-collapseOne">
+                                            <button class="accordion-button" type="button" data-mdb-toggle="collapse"
+                                                data-mdb-target="#flush-collapseOne" aria-expanded="true"
+                                                aria-controls="flush-collapseOne">
                                                 Informations personnelles
                                             </button>
                                         </h2>
-                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse show"
                                             aria-labelledby="flush-headingOne" data-mdb-parent="#accordionFlushExample">
                                             <div class="accordion-body">
                                                 <form>
@@ -103,13 +103,20 @@
                                                         </div>
                                                     </div>
 
-                                                    <!-- Submit button -->
-                                                    <button type="submit" class="btn btn-primary btn-block mb-4">Sign
-                                                        up</button>
+                                                    <div class="text-center">
+                                                        <button type="button" class="btn btn-floating"
+                                                            data-mdb-toggle="collapse"
+                                                            data-mdb-target="#flush-collapseTwo"
+                                                            aria-controls="flush-collapseTwo">
+                                                            <i class="fas fa-chevron-down"></i>
+                                                        </button>
+                                                    </div>
+
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="flush-headingTwo">
                                             <button class="accordion-button collapsed" type="button"
@@ -121,7 +128,49 @@
                                         <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="flush-headingTwo" data-mdb-parent="#accordionFlushExample">
                                             <div class="accordion-body">
-                                                <form action=""></form>
+                                                <form>
+
+                                                    <!-- Email input -->
+                                                    <div class="form-outline mb-4">
+                                                        <input type="email" id="form3Example3" class="form-control" />
+                                                        <label class="form-label" for="adresse_email">Email
+                                                            address</label>
+                                                    </div>
+
+                                                    <!-- Pseudo input -->
+                                                    <div class="form-outline mb-4">
+                                                        <input type="text" id="form1Example" class="form-control" />
+                                                        <label class="form-label" for="pseudo">Nom
+                                                            d'utilisateur</label>
+                                                    </div>
+
+                                                    <!-- Mot de passe input -->
+                                                    <div class="form-outline mb-4">
+                                                        <input type="password" id="form3Example4"
+                                                            class="form-control" />
+                                                        <label class="form-label" for="mot_de_passe">Mot de
+                                                            passe</label>
+                                                    </div>
+
+                                                    <!-- Confirmation mot de passe input -->
+                                                    <div class="form-outline mb-4">
+                                                        <input type="password" id="form3Example5"
+                                                            class="form-control" />
+                                                        <label class="form-label" for="conf_mot_de_passe">Confirmation
+                                                            du mot de passe</label>
+                                                    </div>
+
+                                                </form>
+
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-floating"
+                                                        data-mdb-toggle="collapse"
+                                                        data-mdb-target="#flush-collapseThree"
+                                                        aria-controls="flush-collapseThree">
+                                                        <i class="fas fa-chevron-down"></i>
+                                                    </button>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -137,21 +186,7 @@
                                             aria-labelledby="flush-headingThree"
                                             data-mdb-parent="#accordionFlushExample">
                                             <div class="accordion-body">
-                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                                terry
-                                                richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
-                                                dolor
-                                                brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                                                tempor,
-                                                sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                                shoreditch
-                                                et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-                                                nesciunt
-                                                sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                                occaecat
-                                                craft beer farm-to-table, raw denim aesthetic synth nesciunt you
-                                                probably haven't
-                                                heard of them accusamus labore sustainable VHS.
+
                                             </div>
                                         </div>
                                     </div>
