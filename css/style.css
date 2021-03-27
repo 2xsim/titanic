@@ -3,7 +3,9 @@
     height: 100vh;
 }
 
+
 /* Height for devices larger than 576px */
+
 @media (min-width: 992px) {
     #intro {
         margin-top: -58.59px;
@@ -13,3 +15,57 @@
 .navbar .nav-link {
     color: #fff !important;
 }
+
+
+/*Debut CSS mots de paasse input*/
+
+#texte_indication {}
+
+.form__input:disabled {
+    border-color: grey;
+}
+
+
+/* helpers/icon.css */
+
+.icon {
+    font-size: 1rem;
+}
+
+.form__field {
+    position: relative;
+}
+
+.form__field .icon {
+    position: absolute;
+    right: -1.5em;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.form__input {
+    font: inherit;
+    outline: 0;
+    border-radius: 0.25em;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.form__input:valid {
+    border-color: forestgreen;
+}
+
+.form__input:valid+.icon::after {
+    content: '😁';
+}
+
+.form__input:invalid {
+    border-color: firebrick;
+}
+
+.form__input:invalid+.icon::after {
+    content: '😑';
+}
+
+
+/*Fin CSS mots de paasse input*/

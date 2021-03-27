@@ -35,7 +35,7 @@
                     <div class="row justify-content-center">
                         <div class="col-xl-6 col-md-8">
 
-                            <form class="bg-white rounded shadow-5-strong p-5">
+                            <form class="bg-white rounded shadow-5-strong p-5" onSubmit = "return checkPassword(this)">
                                 <h3 class="card-title">Paré à l'abordage ?</h3>
                                 <h6 class="card-subtitle mb-2 text-muted">Des milliers de célibataires vous attendent
                                 </h6>
@@ -130,7 +130,7 @@
                                         <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                             aria-labelledby="flush-headingTwo" data-mdb-parent="#accordionFlushExample">
                                             <div class="accordion-body">
-                                                <form>
+                                                <form onSubmit = "return checkPassword(this)">
 
                                                     <!-- Email input -->
                                                     <div class="form-outline col-6 offset-md-3 mb-4">
@@ -148,20 +148,28 @@
 
                                                     <!-- Mot de passe input -->
                                                     <div class="form-outline col-6 offset-md-3 mb-4">
-                                                        <input type="password" id="form3Example4"
-                                                            class="form-control" />
-                                                        <label class="form-label" for="mot_de_passe">Mot de
-                                                            passe</label>
+                                                        <div class="form__field">
+                                                            <input type="password" class="form__input" placeholder="Mot de passe" id ="mot_de_passe" name ="mot_de_passe" pattern=".{6,}" required>
+                                                            <span class="icon"></span>
+                                                        </div>
+                                                        <p id= "texte_indication">Le mot de passe doit contenir au moins 6 caractères</p>
                                                     </div>
+                                                    
+
+
 
                                                     <!-- Confirmation mot de passe input -->
-                                                    <div class="form-outline col-6 offset-md-3 mb-4">
+                                                    <div class="form-outline col-7 offset-md-3 mb-4">
                                                         <input type="password" id="form3Example5"
-                                                            class="form-control" />
+                                                            class="form-control" id ="conf_mot_de_passe" name ="conf_mot_de_passe" required/>
                                                         <label class="form-label" for="conf_mot_de_passe">Confirmation
                                                             du mot de passe</label>
                                                     </div>
 
+                                                    <div class="form-outline col-7 offset-md-3 mb-4">
+                                                        <input type="submit" value="Send" 
+                                                        id ="suivant_infoPerso"/>
+                                                    </div>
                                                 </form>
 
                                                 <div class="text-center">
@@ -202,9 +210,27 @@
         <!-- Background image -->
     </header>
     <!--Main Navigation-->
+    <script>
+        function checkPassword(form) {
+    mot_de_passe = form.mot_de_passe.value;
+    conf_mot_de_passe = form.conf_mot_de_passe.value;
 
+    // If Not same return False.    
+    if (mot_de_passe != conf_mot_de_passe) {
+        form.conf_mot_de_passe.setCustomValidity("Mot de passe incohérent !!");
+        return false;
+    }
+
+    // If same return True.
+    else {
+        return true;
+    }
+}
+    </script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+    
+    
 </body>
 
 </html>
