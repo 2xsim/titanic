@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000">
     <div class="container-fluid">
         <!-- Navbar brand -->
-        <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+        <a class="navbar-brand nav-link" href="index.php">
             <strong>Titanic</strong>
         </a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
@@ -15,14 +15,14 @@
                     <a class="nav-link" aria-current="page" href="">Témoignages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="" rel="nofollow" target="_blank">Qui sommes-nous ?</a>
+                    <a class="nav-link" href="">Qui sommes-nous ?</a>
                 </li>
             </ul>
             <?php
                 if (isset($_SESSION['page'])) {
                     switch ($_SESSION['page']) {
                         case 'inscription':
-                            echo'<a class="btn btn-outline-light btn-rounded" href="">Se connecter
+                            echo'<a class="btn btn-outline-light btn-rounded" href="connexion.php">Se connecter
                                 </a>';
                             break;
                         case 'connexion':

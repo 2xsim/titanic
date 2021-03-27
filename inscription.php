@@ -54,8 +54,8 @@
                                             <div class="accordion-body">
                                                 <form>
                                                     <!-- 2 column grid layout with text inputs for the first and last names -->
-                                                    <div class="row mb-4">
-                                                        <div class="col">
+                                                    <div class="row mb-4 d-flex justify-content-center">
+                                                        <div class="col-6">
                                                             <div class="form-outline">
                                                                 <input type="text" id="form3Example1"
                                                                     class="form-control" />
@@ -74,10 +74,11 @@
                                                     </div>
 
                                                     <!--  -->
-                                                    <div class="row mb-4">
-                                                        <div class="col-4">
+                                                    <div
+                                                        class="row d-flex justify-content-center align-items-center mb-4">
+                                                        <div class="col-4"> Je suis un/une :
                                                         </div>
-                                                        <div class="col">
+                                                        <div class="col-4">
                                                             <div class="btn-group">
                                                                 <input type="radio" class="btn-check" name="options"
                                                                     id="option2" autocomplete="off" />
@@ -93,9 +94,10 @@
                                                     </div>
 
                                                     <!-- Date de naissance -->
-                                                    <div class="row mb-4">
-                                                        <div class="col-4">Date de naissance</div>
-                                                        <div class="col">
+                                                    <div
+                                                        class="row mb-4 d-flex justify-content-center align-items-center text-center">
+                                                        <div class="col-5">Date de naissance : </div>
+                                                        <div class="col-5">
                                                             <div class="form-outline">
                                                                 <input type="date" id="form3Example3"
                                                                     class="form-control" />
@@ -131,21 +133,21 @@
                                                 <form>
 
                                                     <!-- Email input -->
-                                                    <div class="form-outline mb-4">
+                                                    <div class="form-outline col-6 offset-md-3 mb-4">
                                                         <input type="email" id="form3Example3" class="form-control" />
-                                                        <label class="form-label" for="adresse_email">Email
-                                                            address</label>
+                                                        <label class="form-label" for="adresse_email">Adresse
+                                                            e-mail</label>
                                                     </div>
 
                                                     <!-- Pseudo input -->
-                                                    <div class="form-outline mb-4">
+                                                    <div class="form-outline col-4 offset-md-4 mb-4">
                                                         <input type="text" id="form1Example" class="form-control" />
                                                         <label class="form-label" for="pseudo">Nom
                                                             d'utilisateur</label>
                                                     </div>
 
                                                     <!-- Mot de passe input -->
-                                                    <div class="form-outline mb-4">
+                                                    <div class="form-outline col-6 offset-md-3 mb-4">
                                                         <input type="password" id="form3Example4"
                                                             class="form-control" />
                                                         <label class="form-label" for="mot_de_passe">Mot de
@@ -153,7 +155,7 @@
                                                     </div>
 
                                                     <!-- Confirmation mot de passe input -->
-                                                    <div class="form-outline mb-4">
+                                                    <div class="form-outline col-6 offset-md-3 mb-4">
                                                         <input type="password" id="form3Example5"
                                                             class="form-control" />
                                                         <label class="form-label" for="conf_mot_de_passe">Confirmation
