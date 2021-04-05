@@ -35,7 +35,7 @@ session_start();
                     <div class="col-xl-6 col-md-8">
 
                         <form class="bg-white rounded shadow-5-strong p-5 mt-5" onSubmit="return checkPassword(this)"
-                            action="./traitements/traitement_inscription.php" enctype="multipart/form-data"
+                            action="traitements/traitement_inscription.php" enctype="multipart/form-data"
                             method="post">
                             <h3 class="card-title">Paré à l'abordage ?</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Des milliers de célibataires vous attendent

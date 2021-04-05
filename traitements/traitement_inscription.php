@@ -1,3 +1,5 @@
+
+
 <?php
 
     $server = "localhost";
@@ -14,17 +16,18 @@
     $pseudo = $_POST["pseudo"];
     $mot_de_passe = $_POST["mot_de_passe"];
     
-    if (!empty($_FILES["photo_de_profil"])) {
+
+    if (!empty($_FILES['photo_de_profil']['name'])) {
         # code...
-        $photo_de_profil = "'../uploads/".$_FILES["photo_de_profil"]["name"]."'";
+        $photo_de_profil = "../uploads/".$_FILES['photo_de_profil']['name'];
     } else {
         # code...
         $photo_de_profil = "NULL";
     }
     
-    if (!empty($_FILES["photo_de_couverture"])) {
+    if (!empty($_FILES['photo_de_couverture']['name'])) {
         # code...
-        $photo_de_couverture = "'../uploads/".$_FILES["photo_de_couverture"]["name"]."'";
+        $photo_de_couverture = "../uploads/".$_FILES['photo_de_couverture']['name'];
     } else {
         # code...
         $photo_de_couverture = "NULL";
@@ -35,22 +38,25 @@
     $bio = $_POST["bio"];
     $raison = $_POST["raison"];
     
-    if(is_uploaded_file($_FILES['photo_de_profil']['tmp_name'])){
-        
-        //on déplace le fichier dans le repertoire
-        if(move_uploaded_file($_FILES['photo_de_profil']['tmp_name'],$photo_de_profil)){
-            }
-        else{
-        //il y a eu une erreur
-        echo "<p>Erreur lors du déplacement du fichier $photo_de_profil</p>" ;
-            }
-        }
-    else{
-        echo "<p>Aucun fichier séléctionné</p>" ;
-    }
+    
 
     if (isset($_POST["soumettre"])) {
         # code...
+        if(is_uploaded_file($_FILES['photo_de_profil']['tmp_name'])){
+        
+            //on déplace le fichier dans le repertoire
+            if(move_uploaded_file($_FILES['photo_de_profil']['tmp_name'],$photo_de_profil)){
+                }
+            else{
+            //il y a eu une erreur
+            echo "<p>Erreur lors du déplacement du fichier $photo_de_profil</p>" ;
+                }
+            }
+        else{
+            echo "<p>Aucun fichier séléctionné</p>" ;
+        }
+
+        
         if(is_uploaded_file($_FILES['photo_de_couverture']['tmp_name'])){
         
         //on déplace le fichier dans le repertoire
