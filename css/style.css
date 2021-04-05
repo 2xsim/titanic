@@ -1,8 +1,7 @@
 #intro {
-    background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+    background-image: url(../img/azrul-aziz-DsvY9NRykRg-unsplash.jpg);
     height: 100vh;
 }
-
 
 /* Height for devices larger than 576px */
 
@@ -16,15 +15,11 @@
     color: #fff !important;
 }
 
-
 /*Debut CSS mots de paasse input*/
-
-#texte_indication {}
 
 .form__input:disabled {
     border-color: grey;
 }
-
 
 /* helpers/icon.css */
 
@@ -40,7 +35,7 @@
     position: absolute;
     right: -1.5em;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
 }
 
 .form__input {
@@ -55,17 +50,16 @@
     border-color: forestgreen;
 }
 
-.form__input:valid+.icon::after {
-    content: '😁';
+.form__input:valid + .icon::after {
+    content: "😁";
 }
 
 .form__input:invalid {
     border-color: firebrick;
 }
 
-.form__input:invalid+.icon::after {
-    content: '😑';
+.form__input:invalid + .icon::after {
+    content: "😑";
 }
-
 
 /*Fin CSS mots de paasse input*/
