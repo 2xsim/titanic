@@ -1,6 +1,4 @@
-<!-- Navbar -->
 
-<!-- Navbar -->
 
 
 <?php
@@ -8,7 +6,7 @@
                 switch ($_SESSION['page']) {
                     case 'inscription':
                         echo '
-                        <nav class="navbar fixed-top navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000">
+                        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                         <div class="container-fluid">
                             <!-- Navbar brand -->
                             <a class="navbar-brand nav-link" href="index.php">
@@ -40,7 +38,7 @@
                     
                     case 'connexion':
                         echo '
-                        <nav class="navbar fixed-top navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000">
+                        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                         <div class="container-fluid">
                             <!-- Navbar brand -->
                             <a class="navbar-brand nav-link" href="index.php">
@@ -72,7 +70,7 @@
                         
                         case 'index' :
                             echo'
-                            <nav class="navbar fixed-top navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000">
+                            <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
                             <div class="container-fluid">
                                 <!-- Navbar brand -->
                                 <a class="navbar-brand nav-link" href="index.php">

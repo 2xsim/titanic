@@ -34,7 +34,9 @@ session_start();
                 <div class="row justify-content-center">
                     <div class="col-xl-6 col-md-8">
 
-                        <form class="bg-white rounded shadow-5-strong p-5" onSubmit="return checkPassword(this)">
+                        <form class="bg-white rounded shadow-5-strong p-5 mt-5" onSubmit="return checkPassword(this)"
+                            action="./traitements/traitement_inscription.php" enctype="multipart/form-data"
+                            method="post">
                             <h3 class="card-title">Paré à l'abordage ?</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Des milliers de célibataires vous attendent
                             </h6>
@@ -56,17 +58,16 @@ session_start();
                                                 <div class="row mb-4 d-flex justify-content-center">
                                                     <div class="col-6">
                                                         <div class="form-outline">
-                                                            <input type="text" id="form3Example1"
-                                                                class="form-control" />
-                                                            <label class="form-label"
-                                                                for="form3Example1">Prénom(s)</label>
+                                                            <input type="text" id="prenoms" class="form-control"
+                                                                name="prenoms" required />
+                                                            <label class="form-label" for="prenoms">Prénom(s)</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="form-outline">
-                                                            <input type="text" id="form3Example2"
-                                                                class="form-control" />
-                                                            <label class="form-label" for="form3Example2">Nom</label>
+                                                            <input type="text" id="nom" class="form-control" name="nom"
+                                                                required />
+                                                            <label class="form-label" for="nom">Nom</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -77,13 +78,13 @@ session_start();
                                                     </div>
                                                     <div class="col-4">
                                                         <div class="btn-group">
-                                                            <input type="radio" class="btn-check" name="options"
-                                                                id="option2" autocomplete="off" />
-                                                            <label class="btn btn-dark" for="option2">Homme</label>
+                                                            <input type="radio" class="btn-check" name="sexe"
+                                                                id="sexe_M" autocomplete="off" value="M" />
+                                                            <label class="btn btn-dark" for="sexe_M">Homme</label>
 
-                                                            <input type="radio" class="btn-check" name="options"
-                                                                id="option3" autocomplete="off" />
-                                                            <label class="btn btn-dark" for="option3">Femme</label>
+                                                            <input type="radio" class="btn-check" name="sexe"
+                                                                id="sexe_F" autocomplete="off" value="F" />
+                                                            <label class="btn btn-dark" for="sexe_F">Femme</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -94,8 +95,9 @@ session_start();
                                                     <div class="col-5">Date de naissance : </div>
                                                     <div class="col-5">
                                                         <div class="form-outline">
-                                                            <input type="date" id="form3Example3"
-                                                                class="form-control" />
+                                                            <input type="date" id="date_de_naissance"
+                                                                class="form-control" name="date_de_naissance"
+                                                                required />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -126,14 +128,16 @@ session_start();
                                         <div class="accordion-body">
                                             <!-- Email input -->
                                             <div class="form-outline col-6 offset-md-3 mb-4">
-                                                <input type="email" id="form3Example3" class="form-control" />
+                                                <input type="email" id="adresse_email" class="form-control"
+                                                    name="adresse_email" required />
                                                 <label class="form-label" for="adresse_email">Adresse
                                                     e-mail</label>
                                             </div>
 
                                             <!-- Pseudo input -->
                                             <div class="form-outline col-4 offset-md-4 mb-4">
-                                                <input type="text" id="form1Example" class="form-control" />
+                                                <input type="text" id="pseudo" class="form-control" name="pseudo"
+                                                    required />
                                                 <label class="form-label" for="pseudo">Nom
                                                     d'utilisateur</label>
                                             </div>
@@ -143,17 +147,17 @@ session_start();
                                                 <div class="form__field">
                                                     <input type="password" class="form__input"
                                                         placeholder="Mot de passe" id="mot_de_passe" name="mot_de_passe"
-                                                        pattern=".{6,}" required>
+                                                        pattern=".{6,}" required />
                                                     <span class="icon"></span>
                                                 </div>
-                                                <p id="texte_indication">Le mot de passe doit contenir au moins 6
-                                                    caractères</p>
+                                                <small id="texte_indication" class="form-text text-muted">Le mot de
+                                                    passe doit contenir au moins 6 caractères</small>
                                             </div>
 
                                             <!-- Confirmation mot de passe input -->
-                                            <div class="form-outline col-7 offset-md-3 mb-4">
-                                                <input type="password" id="form3Example5" class="form-control"
-                                                    id="conf_mot_de_passe" name="conf_mot_de_passe" required />
+                                            <div class="form-outline col-6 offset-md-3 mb-4">
+                                                <input type="password" class="form-control" id="conf_mot_de_passe"
+                                                    name="conf_mot_de_passe" required />
                                                 <label class="form-label" for="conf_mot_de_passe">Confirmation
                                                     du mot de passe</label>
                                             </div>
@@ -185,22 +189,26 @@ session_start();
                                         <div class="accordion-body">
                                             <div class="row mb-4">
 
-                                                <div class="col"><label class="form-label" for="customFile">Photo de
+                                                <div class="col"><label class="form-label" for="photo_de_profil">Photo
+                                                        de
                                                         profil</label>
-                                                    <input type="file" class="form-control" id="customFile" />
+                                                    <input type="file" class="form-control" id="photo_de_profil"
+                                                        name="photo_de_profil" />
                                                 </div>
-                                                <div class="col"><label class="form-label" for="customFile">Photo de
+                                                <div class="col"><label class="form-label"
+                                                        for="photo_de_couverture">Photo de
                                                         couverture</label>
-                                                    <input type="file" class="form-control" id="customFile" />
+                                                    <input type="file" class="form-control" id="photo_de_couverture"
+                                                        name="photo_de_couverture" />
                                                 </div>
 
                                             </div>
                                             <div class="form-outline mb-4">
-                                                <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-                                                <label class="form-label" for="form4Example3">Bio</label>
+                                                <textarea class="form-control" id="bio" rows="4" name="bio"></textarea>
+                                                <label class="form-label" for="bio">Bio</label>
                                             </div>
                                             <div class="mb-4"><select class="form-select"
-                                                    aria-label="Default select example">
+                                                    aria-label="Default select example" name="raison">
                                                     <option selected>Raison</option>
                                                     <option value="1">One</option>
                                                     <option value="2">Two</option>
@@ -210,13 +218,14 @@ session_start();
 
                                             <div class="row justify-content-center mb-4">
                                                 <div class="text-center"><input class="btn btn-dark col-3" type="submit"
-                                                        value="S'inscrire" id="suivant_infoPerso" />
+                                                        value="S'inscrire" id="suivant_infoPerso" name="soumettre" />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                         </form>
+
                     </div>
                 </div>
             </div>
