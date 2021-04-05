@@ -195,6 +195,10 @@ session_start();
                                                 </div>
 
                                             </div>
+                                            <div class="form-outline mb-4">
+                                                <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                                                <label class="form-label" for="form4Example3">Bio</label>
+                                            </div>
                                             <div class="mb-4"><select class="form-select"
                                                     aria-label="Default select example">
                                                     <option selected>Raison</option>
