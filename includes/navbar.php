@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000">
     <div class="container-fluid">
         <!-- Navbar brand -->
         <a class="navbar-brand nav-link" href="index.php">
@@ -19,21 +19,21 @@
                 </li>
             </ul>
             <?php
-                if (isset($_SESSION['page'])) {
-                    switch ($_SESSION['page']) {
-                        case 'inscription':
-                            echo'<a class="btn btn-outline-light btn-rounded" href="connexion.php">Se connecter
+            if (isset($_SESSION['page'])) {
+                switch ($_SESSION['page']) {
+                    case 'inscription':
+                        echo '<a class="btn btn-outline-light btn-rounded" href="connexion.php">Se connecter
                                 </a>';
-                            break;
-                        case 'connexion':
-                            echo '<a class="btn btn-outline-light btn-rounded" href="inscription.php">S\'inscrire
+                        break;
+                    case 'connexion':
+                        echo '<a class="btn btn-outline-light btn-rounded" href="inscription.php">S\'inscrire
                             </a>';
-                            break;
-                        default:
-                            echo "DEFAUT";
-                            break;
-                    }
+                        break;
+                    default:
+                        echo "DEFAUT";
+                        break;
                 }
+            }
             ?>
         </div>
     </div>
