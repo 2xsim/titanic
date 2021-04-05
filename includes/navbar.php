@@ -29,6 +29,24 @@
                             echo '<a class="btn btn-outline-light btn-rounded" href="inscription.php">S\'inscrire
                             </a>';
                             break;
+                        
+                        case 'index' :
+                            echo'<a class="btn btn-outline-light btn-rounded" href="connexion.php">Se connecter
+                                </a>';
+                            echo '<a class="btn btn-outline-light btn-rounded" href="inscription.php">S\'inscrire
+                                </a>';
+                            break;
+
+                        case 'acc_user' :
+                            echo 
+                                '<div>
+                                    <form action="tt.php" method="POST">
+                                        <input type="search">
+                                        <i class="fa fa-search"></i>
+                                    </form>
+                                </div>' ;
+                            break ;
+                        
                         default:
                             echo "DEFAUT";
                             break;
