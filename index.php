@@ -39,7 +39,14 @@
         </div>
     </div>
     <!-- Background image -->
-    <div class="plan2">
+
+    <div class="plan1" id="plan1">
+    </div>
+
+    <div class="plan2" id="plan2">
+    </div>
+
+    <div class="plan3" id="plan3">
         <div class="container hero">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
