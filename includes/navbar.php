@@ -1,4 +1,5 @@
 <?php
+        echo '<header>';
             if (isset($_SESSION['page'])) {
                 switch ($_SESSION['page']) {
                     case 'inscription':
@@ -94,7 +95,7 @@
                                         </li>
                                     </ul>
                         
-                        
+                    
                                     <a class="btn btn-outline-light btn-rounded" href="connexion.php">Se connecter
                                     </a>
                                     <a class="btn btn-outline-light btn-rounded" href="inscription.php">S\'inscrire
@@ -149,4 +150,5 @@
                     
                 }
             }
+            echo '</header>';
             ?>
