@@ -15,7 +15,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="./css/style_header.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -35,8 +35,7 @@ session_start();
                     <div class="col-xl-6 col-md-8">
 
                         <form class="bg-white rounded shadow-5-strong p-5 mt-5" onSubmit="return checkPassword(this)"
-                            action="traitements/traitement_inscription.php" enctype="multipart/form-data"
-                            method="post">
+                            action="traitements/traitement_inscription.php" enctype="multipart/form-data" method="post">
                             <h3 class="card-title">Paré à l'abordage ?</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Des milliers de célibataires vous attendent
                             </h6>
@@ -216,7 +215,7 @@ session_start();
                                                 </select>
                                             </div>
 
-                                            <div class="row justify-content-center mb-4">
+                                            <div class="row justify-content-center">
                                                 <div class="text-center"><input class="btn btn-dark col-3" type="submit"
                                                         value="S'inscrire" id="suivant_infoPerso" name="soumettre" />
                                                 </div>
