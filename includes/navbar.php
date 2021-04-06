@@ -84,7 +84,7 @@
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                         
                                         <li class="nav-item active">
-                                            <a class="nav-link" aria-current="page" href="#plan1">Qui sommes-nous ?</a>
+                                            <a class="nav-link" aria-current="page" href="#plan1">Pourquoi nous choisir ?</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="#plan2">Nos conseils</a>
