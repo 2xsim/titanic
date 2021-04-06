@@ -1,6 +1,3 @@
-
-
-
 <?php
             if (isset($_SESSION['page'])) {
                 switch ($_SESSION['page']) {
