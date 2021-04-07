@@ -2,7 +2,7 @@
 
     session_start();
 
-    include "../includes/config_db.php";
+    include "includes/config_db.php";
     
     $chConnect = $_SESSION["chConnect"];
     $pseudo = $_POST["pseudo"];

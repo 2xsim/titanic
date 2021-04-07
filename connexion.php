@@ -40,8 +40,8 @@
                             <br>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="form1Example1" class="form-control" name="pseudo"/>
-                                <label class="form-label" for="form1Example1">Adresse e-mail</label>
+                                <input type="text" id="form1Example1" class="form-control" name="pseudo"/>
+                                <label class="form-label" for="form1Example1">e-mail/ pseudo</label>
                             </div>
 
                             <!-- Password input -->

@@ -1,6 +1,6 @@
 <?php
 
-include "includes/config_db.php";
+include "../includes/config_db.php";
 
 $prenoms = $_POST["prenoms"];
 $nom = $_POST["nom"];
@@ -12,26 +12,29 @@ $pseudo = $_POST["pseudo"];
 $mot_de_passe = $_POST["mot_de_passe"];
 
 
+$bio = addslashes($_POST["bio"]);
+$raison = $_POST["raison"];
+
+
+echo $bio;
+
 if (!empty($_FILES['photo_de_profil']['name'])) {
     # code...
-    $photo_de_profil = "../uploads/" . $_FILES['photo_de_profil']['name'];
+    //$photo_de_profil = "../uploads/" . $_FILES['photo_de_profil']['name'];
+    $photo_de_profil = "../uploads/pp_" . $pseudo . "jpg";
 } else {
     # code...
-    $photo_de_profil = "NULL";
+    $photo_de_profil = NULL;
 }
 
 if (!empty($_FILES['photo_de_couverture']['name'])) {
     # code...
-    $photo_de_couverture = "../uploads/" . $_FILES['photo_de_couverture']['name'];
+    //$photo_de_couverture = "../uploads/" . $_FILES['photo_de_couverture']['name'];
+    $photo_de_couverture = "../uploads/pc_" . $pseudo . "jpg";
 } else {
     # code...
-    $photo_de_couverture = "NULL";
+    $photo_de_couverture = NULL;
 }
-
-
-
-$bio = $_POST["bio"];
-$raison = $_POST["raison"];
 
 
 
@@ -65,8 +68,9 @@ if (isset($_POST["soumettre"])) {
 
 
 try {
-    mysqli_query($chConnect, "INSERT INTO users (pseudo, nom, prenoms, sexe, date_de_naissance, adresse_email, mot_de_passe, photo_de_profil, photo_de_couverture, bio, raison) VALUES ('$pseudo', '$nom', '$prenoms', '$sexe', '$date_de_naissance', '$adresse_email', '$mot_de_passe', '$photo_de_profil', '$photo_de_couverture', '$bio', '$raison')");
-    echo ("INSERT INTO users (pseudo, nom, prenoms, sexe, date_de_naissance, adresse_email, mot_de_passe, bio, raison) VALUES ('$pseudo', '$nom', '$prenoms', '$sexe', '$date_de_naissance', '$adresse_email', '$mot_de_passe', '$photo_de_profil', '$photo_de_couverture', '$bio', '$raison')");
+    $request = "INSERT INTO users (pseudo, nom, prenoms, sexe, date_de_naissance, adresse_email, mot_de_passe, photo_de_profil, photo_de_couverture, bio, raison) VALUES ('$pseudo', '$nom', '$prenoms', '$sexe', '$date_de_naissance', '$adresse_email', '$mot_de_passe', '$photo_de_profil', '$photo_de_couverture', '$bio', '$raison')" ;
+    mysqli_query($chConnect, $request);
+    echo $request;
 } catch (Exception $e) {
     echo ("Impossible de traiter les données. Erreur : " . $e->getMessage());
 }
