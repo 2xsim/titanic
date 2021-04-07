@@ -65,8 +65,6 @@ if (isset($_POST["soumettre"])) {
 
 
 try {
-    $chConnect = mysqli_connect($server, $dbuser, $dbpassword);
-    mysqli_query($chConnect, 'USE ' . $dbname . ';') or exit(mysqli_error($chConnect));
     mysqli_query($chConnect, "INSERT INTO users (pseudo, nom, prenoms, sexe, date_de_naissance, adresse_email, mot_de_passe, photo_de_profil, photo_de_couverture, bio, raison) VALUES ('$pseudo', '$nom', '$prenoms', '$sexe', '$date_de_naissance', '$adresse_email', '$mot_de_passe', '$photo_de_profil', '$photo_de_couverture', '$bio', '$raison')");
     echo ("INSERT INTO users (pseudo, nom, prenoms, sexe, date_de_naissance, adresse_email, mot_de_passe, bio, raison) VALUES ('$pseudo', '$nom', '$prenoms', '$sexe', '$date_de_naissance', '$adresse_email', '$mot_de_passe', '$photo_de_profil', '$photo_de_couverture', '$bio', '$raison')");
 } catch (Exception $e) {

@@ -34,19 +34,19 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-md-8">
-                        <form class="bg-white rounded shadow-5-strong p-5">
+                        <form class="bg-white rounded shadow-5-strong p-5" method="post" action="traitements/traitement_connexion.php">
                             <h3 class="card-title">Dépêchez-vous !</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Vous avez raté tellement de choses</h6>
                             <br>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="email" id="form1Example1" class="form-control" />
+                                <input type="email" id="form1Example1" class="form-control" name="pseudo"/>
                                 <label class="form-label" for="form1Example1">Adresse e-mail</label>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="form1Example2" class="form-control" />
+                                <input type="password" id="form1Example2" class="form-control"  name="password"/>
                                 <label class="form-label" for="form1Example2">Mot de passe</label>
                             </div>
 
