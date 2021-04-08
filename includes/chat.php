@@ -331,7 +331,7 @@
                     <div class="flex-shrink-0"><img
                             src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user"
                             width="50" class="rounded-circle" /></div>
-                    <div class="flex-grow-1ms-3">
+                    <div class="flex-grow-1 ms-3">
                         <div class="bg-dark rounded py-2 px-3 mb-2">
                             <p class="text-small mb-0 text-light">
                                 Le 11, pour faire référence à un joueur très perfomant qu'on connaît bien,
@@ -401,7 +401,7 @@
                     <div class="flex-shrink-0"><img
                             src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user"
                             width="50" class="rounded-circle" /></div>
-                    <div class="flex-grow-1ms-3">
+                    <div class="flex-grow-1 ms-3">
                         <div class="bg-dark rounded py-2 px-3 mb-2">
                             <p class="text-small mb-0 text-light">
                                 Le 11, pour faire référence à un joueur très perfomant qu'on connaît bien.
@@ -433,7 +433,7 @@
                     <div class="flex-shrink-0"><img
                             src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user"
                             width="50" class="rounded-circle" /></div>
-                    <div class="flex-grow-1ms-3">
+                    <div class="flex-grow-1 ms-3">
                         <div class="bg-dark rounded py-2 px-3 mb-2">
                             <p class="text-small mb-0 text-light">
                                 Le 11, pour faire référence à un joueur très perfomant qu'on connaît bien.

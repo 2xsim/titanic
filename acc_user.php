@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="./css/style_acc_user.css">
     <link rel="stylesheet" href="./css/style_chat.css">
     <link rel="stylesheet" href="./css/style_users.css">
+    <link rel="stylesheet" href="./css/style_settings.css">
+    <link rel="stylesheet" href="./css/style_user.css">
 </head>
 
 <body>
@@ -94,17 +96,17 @@
                         <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
                             id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                             <strong class="d-none d-sm-block mx-2">2xsim_</strong>
-                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle"
-                                height="26" alt="" loading="lazy" />
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                                class="rounded-circle bg-white" height="26" alt="" loading="lazy" />
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item d-flex align-items-center justify-content-center" href="#"><span
-                                        class="material-icons me-1">
+                            <li><a class="dropdown-item d-flex align-items-center justify-content-center"
+                                    href="?page=my_profile"><span class="material-icons me-1">
                                         person
                                     </span>Mon
                                     profil</a></li>
-                            <li><a class="dropdown-item d-flex align-items-center justify-content-center" href="#"><span
-                                        class="material-icons me-1">
+                            <li><a class="dropdown-item d-flex align-items-center justify-content-center"
+                                    href="?page=settings"><span class="material-icons me-1">
                                         settings
                                     </span>Paramètres</a></li>
                             <li class="divider dropdown-divider"></li>
@@ -129,12 +131,9 @@
     ?>
 
     <!--Main Navigation-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
-        integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
-        integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     </script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
