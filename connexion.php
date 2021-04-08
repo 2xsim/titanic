@@ -84,8 +84,31 @@
     <!-- Background image -->
     <!--Main Navigation-->
 
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#objet_research").keyup(function() {
+                $("#resultat_recherche").html('');
+
+                var objet_research = $(this).val();
+                if (objet_research != "") {
+                    $.ajax({
+                        type: 'GET',
+                        url: 'traitements/traitement_research.php',
+                        data: "objet_research=" + encodeURIComponent(objet_research),
+                        success: function(resultat) {
+                            if (resultat != "") {
+                                $("#resultat_recherche").append(resultat);
+                            } else {
+                                document.getElementById('resultat_recherche').innerHTML = "<p>Aucun résultat</p>";
+                            }
+                        }
+                    })
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
