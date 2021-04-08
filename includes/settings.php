@@ -269,9 +269,9 @@
         </div>
     </div>
 
-    <div class="text-right mt-3">
-        <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
-        <button type="button" class="btn btn-default">Cancel</button>
+    <div class="text-end mt-3">
+        <button type="button" class="btn btn-primary">Enregistrer les modifications</button>&nbsp;
+        <a class="btn btn-default" href="javascript:history.go(-1)">Annuler</a>
     </div>
 
 </div>

@@ -46,7 +46,7 @@
         </blockquote>
     </div>
 
-    <div class="container hero">
+    <div class="container hero" id="plan1">
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h1 class="text-center">L'équipe dirigeante</h1>
@@ -54,90 +54,158 @@
         </div>
     </div>
 
-
-    <div class="container d-flex justify-content-around">
-        <div class="testimonial">
-            <div class="row">
-                <div class="avatar col-md-5">
-                    <a href="#">
-                        <img class="img-circle" src="https://bootdey.com/img/Content/user_3.jpg" alt="Taylor Otwell">
-                    </a>
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block profile-card-2">
+                        <img class="card-img-top"
+                            src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                            alt="Card image cap" />
+                        <div class="profile-name">Patrick ZOUNON</div>
+                        <div class="profile-username">
+                            @herrptz
+                        </div>
+                        <div class="profile-icons me-5">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="mx-2"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <p class="card-text">
+                            Le Bilou, c'est comme ça que son entourage l'appelle. Ce surnom sert à
+                            mettre l'accent sur son élégance et son habilité à la parole qui ne laisse pas indiférentes
+                            toutes ces femmes qu'il approche.
+                        </p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="testimonial-main col-md-7">
-                    <h4 class="media-heading"><a href="#m">Patrick ZOUNON</a></h4>
-                    <p class="testimony-body">Le Bilou, c'est comme ça que son entourage l'appelle. Ce surnom sert à
-                        mettre l'accent sur son élégance et son habilité à la parole qui ne laisse pas indiférentes
-                        toutes ces femmes qu'il approche.</p>
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block profile-card-2">
+                        <img class="card-img-top"
+                            src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                            alt="Card image cap" />
+                        <div class="profile-name">Prince SIMEDA</div>
+                        <div class="profile-username">
+                            @2xsim_
+                        </div>
+                        <div class="profile-icons me-5">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="mx-2"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <p class="card-text">
+                            Le 11, pour faire référence à un joueur très perfomant qu'on connaît bien,
+                            cet homme n'est pas prêt à s'attacher et multiplie les conquêtes sur courtes durées. Il
+                            maitrîse
+                            bien son sujet et vous en dira surement plus lors de nos ateliers. Chacun ses vices et ses
+                            délires !
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block profile-card-2">
+                        <img class="card-img-top"
+                            src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                            alt="Card image cap" />
+                        <div class="profile-name">Mardochée YAO</div>
+                        <div class="profile-username">
+                            @johndoesurname
+                        </div>
+                        <div class="profile-icons me-5">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="mx-2"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <p class="card-text">
+                            Alias Joe le rapide.
+                            Cet homme n'a même pas besoin d'approcher sa proie pour venir à terme d'elle. Un chanceux de
+                            la
+                            vie vous direz ? Et bien non! Il a juste profiner son comportement journalier et son
+                            aparence.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="testimonial">
-            <div class="row">
-                <div class="avatar col-md-5">
-                    <a href="#">
-                        <img class="img-circle" src="https://bootdey.com/img/Content/user_2.jpg" alt="Taylor Otwell">
-                    </a>
+        <div class="row d-flex justify-content-evenly my-4">
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block profile-card-2">
+                        <img class="card-img-top"
+                            src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                            alt="Card image cap" />
+                        <div class="profile-name">Anne Désirée<br>ESSIS</div>
+                        <div class="profile-username">
+                            @johndoesurname
+                        </div>
+                        <div class="profile-icons me-5">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="mx-2"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <p class="card-text">
+                            Le Bilou, c'est comme ça que son entourage l'appelle. Ce surnom sert à
+                            mettre l'accent sur son élégance et son habilité à la parole qui ne laisse pas indiférentes
+                            toutes ces femmes qu'il approche.
+                        </p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="testimonial-main col-md-7">
-                    <h4 class="media-heading"><a href="#">Mike Prince SIMEDA</a></h4>
-                    <p class="testimony-body">Le 11, pour faire référence à un joueur très perfomant qu'on connaît bien,
-                        cet homme n'est pas prêt à s'attacher et multiplie les conquêtes sur courtes durées. Il maitrîse
-                        bien son sujet et vous en dira surement plus lors de nos ateliers. Chacun ses vices et ses
-                        délires !</p>
+            <div class="col-md-4 mt-4">
+                <div class="card profile-card-5">
+                    <div class="card-img-block profile-card-2">
+                        <img class="card-img-top"
+                            src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                            alt="Card image cap" />
+                        <div class="profile-name">Emmanuel AMICHIA</div>
+                        <div class="profile-username">
+                            @johndoesurname
+                        </div>
+                        <div class="profile-icons me-5">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="mx-2"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body pt-0">
+                        <p class="card-text">
+                            Le Bilou, c'est comme ça que son entourage l'appelle. Ce surnom sert à
+                            mettre l'accent sur son élégance et son habilité à la parole qui ne laisse pas indiférentes
+                            toutes ces femmes qu'il approche.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="testimonial">
-            <div class="row">
-                <div class="avatar col-md-5">
-                    <a href="#">
-                        <img class="img-circle" src="https://bootdey.com/img/Content/user_1.jpg" alt="Taylor Otwell">
-                    </a>
-                </div>
-
-                <div class="testimonial-main col-md-7">
-                    <h4 class="media-heading"><a href="#">Mardochée YAO</a></h4>
-                    <p class="testimony-body">Alias Joe le rapide.
-                        Cet homme n'a même pas besoin d'approcher sa proie pour venir à terme d'elle. Un chanceux de la
-                        vie vous direz ? Et bien non! Il a juste profiner son comportement journalier et son aparence.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container d-flex justify-content-around">
-        <div class="testimonial">
-            <div class="row">
-                <div class="avatar col-md-5">
-                    <a href="#">
-                        <img class="img-circle" src="https://bootdey.com/img/Content/user_3.jpg" alt="Taylor Otwell">
-                    </a>
-                </div>
-
-                <div class="testimonial-main col-md-7">
-                    <h4 class="media-heading"><a href="#m">Anne Désirée ESSIS</a></h4>
-                    <p class="testimony-body">bootstrap rules!</p>
-                </div>
-            </div>
-        </div>
-        <div class="testimonial">
-            <div class="row">
-                <div class="avatar col-md-5">
-                    <a href="#">
-                        <img class="img-circle" src="https://bootdey.com/img/Content/user_2.jpg" alt="Taylor Otwell">
-                    </a>
-                </div>
-
-                <div class="testimonial-main col-md-7">
-                    <h4 class="media-heading"><a href="#">Darla Marty</a></h4>
-                    <p class="testimony-body">Bootdey rules!</p>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <div class="plan2" id="plan2">
