@@ -1,49 +1,3 @@
-/*About us*/
-
-body {
-    background: #f9f9f9;
-}
-
-.testimony-body {
-    text-align: justify;
-}
-
-.testimonial {
-    margin-bottom: 3em;
-    background: #fff;
-    padding: 2em;
-    min-height: 169px;
-    box-shadow: 0 16px 5px rgba(0, 0, 0, 0.04);
-}
-
-.avatar .img-circle {
-    background: #fff;
-    padding: 3px;
-    border: 1px solid #c5c5c5;
-}
-
-.avatar img {
-    max-width: 100%;
-}
-
-.img-circle {
-    border-radius: 50%;
-}
-
-.testimonial h4,
-.testimonial h4 a {
-    font-weight: 700;
-}
-
-.testimonial h4 {
-    margin-bottom: 8px;
-}
-
-.testimonial .testimony-body {
-    font-size: 0.9em;
-}
-/*About us*/
-
 .gtco-testimonials {
     position: relative;
     margin-top: 30px;
@@ -107,12 +61,12 @@ body {
 }
 
 .gtco-testimonials .card .card-img-top {
-    max-width: 100px;
-    border-radius: 50%;
+    max-width: 300px;
+    border-radius: 10%;
     margin: 15px auto 0;
     box-shadow: 0 8px 20px -4px #95abbb;
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
 }
 
 .gtco-testimonials .card h5 {
@@ -151,12 +105,155 @@ body {
 
 .gtco-testimonials .center .card-img-top {
     max-width: 100%;
-    height: 120px;
-    width: 120px;
+    height: 200px;
+    width: 200px;
 }
 
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel button.owl-dot {
     outline: 0;
+}
+
+/************* Pourquoi nous choisir ************/
+
+body {
+    background-color: #f1f2f3;
+}
+
+.card-container {
+    padding: 100px 0px;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+.profile-card-2 {
+    max-width: 300px;
+    background-color: #fff;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.profile-card-2 img {
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-name {
+    position: absolute;
+    left: 30px;
+    bottom: 70px;
+    font-size: 30px;
+    color: #fff;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-username {
+    position: absolute;
+    bottom: 55px;
+    left: 30px;
+    color: #fff;
+    font-size: 13px;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2:hover img {
+    filter: grayscale(100%);
+}
+
+.profile-card-2:hover .profile-name {
+    bottom: 80px;
+}
+
+.profile-card-2:hover .profile-username {
+    bottom: 60px;
+}
+
+.profile-card-2:hover .profile-icons {
+    right: 40px;
+}
+
+.profile-card-5 {
+    margin-top: 30px;
+}
+
+.profile-card-5 .card-img-block {
+    width: 91%;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
+}
+.profile-card-5 .card-img-block img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+}
+
+.profile-icons ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.profile-icons ul li {
+    list-style: none;
+}
+
+.profile-icons ul li a {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: 0.5s;
+}
+
+.profile-icons ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.profile-icons ul li a .fab {
+    widht: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(30px - 12px);
+    color: #262626;
+    transition: 0.5s;
+}
+
+.profile-icons ul li:nth-child(1) a:hover .fab {
+    color: #3b5998;
+}
+
+.profile-icons ul li:nth-child(2) a:hover .fab {
+    color: #e4405f;
+}
+
+.profile-icons ul li:nth-child(3) a:hover .fab {
+    color: #00aced;
 }
