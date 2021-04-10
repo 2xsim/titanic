@@ -40,14 +40,32 @@
                             <br>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="text" class="form-control" name="pseudo" id="pseudo"/>
+                                <input type="text" class="form-control" name="pseudo" id="pseudo" />
                                 <label class="form-label" for="pseudo">e-mail/ pseudo</label>
                             </div>
 
+                            <div class="input_container">
+                                <div class="placeholder">Nom</div>
+                                <svg viewBox="0 0 320 100" width="320" height="100">
+                                    <path stroke="#000" stroke-width="2" fill="none" />
+                                </svg>
+                                <input type="text" />
+                            </div>
+
                             <!-- Password input -->
-                            <div class="form-outline mb-4">
-                                <input type="password" class="form-control"  name="password" id="password"/>
-                                <label class="form-label" for="password">Mot de passe</label>
+                            <div class="row justify-content-center form-outline mb-4">
+                                <label for="inp" class="inp">
+                                    <input type="password" id="password" placeholder="Mot de passe" pattern=".{8,}"
+                                        required>
+                                    <svg width="280px" height="18px" viewBox="0 0 280 18" class="password_border">
+                                        <path
+                                            d="M0,12 L223.166144,12 C217.241379,12 217.899687,12 225.141066,12 C236.003135,12 241.9279,12 249.827586,12 C257.727273,12 264.639498,12 274.514107,12 C281.097179,12 281.755486,12 276.489028,12">
+                                        </path>
+                                    </svg>
+                                    <svg width="14px" height="12px" viewBox="0 0 14 12" class="check">
+                                        <path d="M1 7 5.5 11 L13 1"></path>
+                                    </svg>
+                                </label>
                             </div>
                             <!-- 2 column grid layout for inline styling -->
                             <div class="row mb-4">
@@ -74,7 +92,7 @@
                             <!-- Submit button -->
                             <div class="row justify-content-center">
                                 <div class="text-center"><input class="btn btn-dark col-4" type="button"
-                                        value="Se connecter" name="soumettre" id="connexion"/>
+                                        value="Se connecter" name="soumettre" id="connexion" />
                                 </div>
                             </div>
                         </form>
@@ -88,30 +106,36 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#connexion").click(function() {
-                $("#texte_alternatif").html('');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/bezier-easing@2.1.0/dist/bezier-easing.min.js'></script>
+    <script src="./js/script.js"></script>
 
-                var pseudo = $("#pseudo").val();
-                var password = $("#password").val();
-                if (pseudo != "" & password!="") {
-                    $.ajax({
-                        type: 'GET',
-                        url: 'traitements/traitement_connexion.php',
-                        data: "pseudo=" + encodeURIComponent(pseudo) + "&password=" + encodeURIComponent(password),
-                        success: function(resultat) {
-                            if (resultat == "Authentification Success") {
-                                //$("#texte_alternatif").append(resultat);
-                                window.location.href = 'acc_user.php';
-                            } else {
-                                document.getElementById('texte_alternatif').innerHTML = "Identifiants incorrects";
-                            }
+    <script>
+    $(document).ready(function() {
+        $("#connexion").click(function() {
+            $("#texte_alternatif").html('');
+
+            var pseudo = $("#pseudo").val();
+            var password = $("#password").val();
+            if (pseudo != "" & password != "") {
+                $.ajax({
+                    type: 'GET',
+                    url: 'traitements/traitement_connexion.php',
+                    data: "pseudo=" + encodeURIComponent(pseudo) + "&password=" +
+                        encodeURIComponent(password),
+                    success: function(resultat) {
+                        if (resultat == "Authentification Success") {
+                            //$("#texte_alternatif").append(resultat);
+                            window.location.href = 'acc_user.php';
+                        } else {
+                            document.getElementById('texte_alternatif').innerHTML =
+                                "Identifiants incorrects";
                         }
-                    })
-                }
-            });
+                    }
+                })
+            }
         });
+    });
     </script>
 </body>
 
