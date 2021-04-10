@@ -1,6 +1,6 @@
 <div class="container">
     <div class="main-body">
-        <div class="row my-2"><img class="social-cover" src="./uploads/<?= $current_user_photo_de_profil ?>" alt="">
+        <div class="row my-2"><img class="social-cover" src="./uploads/<?= $current_user_photo_de_couverture ?>" alt="">
         </div>
         <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
