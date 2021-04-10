@@ -139,8 +139,10 @@ session_start();
                                                     required />
                                                 <label class="form-label" for="pseudo">Nom
                                                     d'utilisateur</label>
-                                            </div>
 
+                                            </div>
+                                            <div id="texte_alternatif">
+                                            </div>
                                             <!-- Mot de passe input -->
                                             <div class="form-outline col-6 offset-md-3 mb-4">
                                                 <div class="form__field">
@@ -232,6 +234,8 @@ session_start();
     </div>
     <!-- Background image -->
     <!--Main Navigation-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     function checkPassword(form) {
         mot_de_passe = form.mot_de_passe.value;
@@ -248,6 +252,32 @@ session_start();
             return true;
         }
     }
+    </script>
+
+    <script>
+    $(document).ready(function() {
+        $("#pseudo").keyup(function() {
+            //$("#texte_alternatif").html('HHT');
+
+            var pseudo_research = $(this).val();
+            if (pseudo_research.trim() != "") {
+                $.ajax({
+                    type: 'GET',
+                    url: 'traitements/traitement_pseudo_validation.php',
+                    data: "objet_research=" + encodeURIComponent(pseudo_research),
+                    success: function(resultat) {
+                        if (resultat != "") {
+                            document.getElementById('texte_alternatif').innerHTML =
+                                "<p>pseudo invalide</p>";
+                        } else {
+                            document.getElementById('texte_alternatif').innerHTML =
+                                "<p>pseudo valide</p>";
+                        }
+                    }
+                })
+            }
+        });
+    });
     </script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
