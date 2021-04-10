@@ -2,8 +2,8 @@
 
 include "../includes/config_db.php";
 
-$prenoms = $_POST["prenoms"];
 $nom = $_POST["nom"];
+$prenoms = $_POST["prenoms"];
 $sexe = $_POST["sexe"];
 $date_de_naissance = $_POST["date_de_naissance"];
 
@@ -71,6 +71,19 @@ try {
     $request = "INSERT INTO users (pseudo, nom, prenoms, sexe, date_de_naissance, adresse_email, mot_de_passe, photo_de_profil, photo_de_couverture, bio, raison) VALUES ('$pseudo', '$nom', '$prenoms', '$sexe', '$date_de_naissance', '$adresse_email', '$mot_de_passe', '$photo_de_profil', '$photo_de_couverture', '$bio', '$raison')" ;
     mysqli_query($chConnect, $request);
     echo $request;
+
+
+    $_SESSION["current_user_pseudo"]= $pseudo;
+    $_SESSION["current_user_lastname"]= $nom;
+    $_SESSION["current_user_firstname"]= $prenoms;
+    $_SESSION["current_user_sexe"]= $sexe;
+    $_SESSION["current_user_date_de_naissance"]= $date_de_naissance;
+    $_SESSION["current_user_adresse_email"]= $adresse_email;
+    $_SESSION["current_user_photo_de_profil"]= $photo_de_profil;
+    $_SESSION["current_user_photo_de_couverture"]= $photo_de_couverture;
+    $_SESSION["current_user_bio"]= stripslashes($bio);
+    $_SESSION["current_user_raison"]= $_SESSION["ref_raison"][$raison];
+    header("Location:../acc_user.php");
 } catch (Exception $e) {
     echo ("Impossible de traiter les données. Erreur : " . $e->getMessage());
 }

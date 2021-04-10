@@ -13,9 +13,9 @@
     
     try {
         if (stripos($pseudo, '@')) {
-            $request = "SELECT nom, prenoms, mot_de_passe FROM users WHERE adresse_email = '$pseudo';" ;
+            $request = "SELECT * FROM users WHERE adresse_email = '$pseudo';" ;
         } else {
-            $request = "SELECT nom, prenoms, mot_de_passe FROM users WHERE pseudo = '$pseudo';" ;
+            $request = "SELECT * FROM users WHERE pseudo = '$pseudo';" ;
         }
         
         $result = mysqli_query( $chConnect, $request) ;
@@ -23,8 +23,16 @@
         $userpassword = $row["mot_de_passe"];
 
         if ($userpassword == $password_saisi) {
-            $_SESSION["user_lastname"]= $row["nom"];
-            $_SESSION["user_firstname"]= $row["prenoms"];
+            $_SESSION["current_user_pseudo"]= $row["pseudo"];
+            $_SESSION["current_user_lastname"]= $row["nom"];
+            $_SESSION["current_user_firstname"]= $row["prenoms"];
+            $_SESSION["current_user_sexe"]= $row["sexe"];
+            $_SESSION["current_user_date_de_naissance"]= $row["date_de_naissance"];
+            $_SESSION["current_user_adresse_email"]= $row["adresse_email"];
+            $_SESSION["current_user_photo_de_profil"]= $row["photo_de_profil"];
+            $_SESSION["current_user_photo_de_couverture"]= $row["photo_de_couverture"];
+            $_SESSION["current_user_bio"]= stripslashes($row["bio"]);
+            $_SESSION["current_user_raison"]= $_SESSION["ref_raison"][$row["raison"]];
             echo "Authentification Success";
         } else {
             echo "Connexion impossible";

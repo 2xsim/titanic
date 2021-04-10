@@ -25,7 +25,7 @@
 
 <body>
 
-    <?php 
+        <?php 
             $_SESSION['page'] = "index";
             include "includes/navbar.php";
         ?>
