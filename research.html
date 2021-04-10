@@ -25,7 +25,7 @@
                 $("#resultat_recherche").html('');
 
                 var objet_research = $(this).val();
-                if (objet_research != "") {
+                if (objet_research.trim() != "") {
                     $.ajax({
                         type: 'GET',
                         url: 'traitements/traitement_research.php',

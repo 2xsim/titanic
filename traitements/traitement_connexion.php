@@ -2,11 +2,14 @@
 
     session_start();
 
-    include "includes/config_db.php";
+    include "../includes/config_db.php";
     
+    if (isset($_GET["pseudo"]) and isset($_GET["password"])) {
+        $pseudo = (String) $_GET["pseudo"];
+        $password_saisi = (String) $_GET["password"];
+        # code...
+    }
     $chConnect = $_SESSION["chConnect"];
-    $pseudo = $_POST["pseudo"];
-    $password_saisi = $_POST["password"];
     
     try {
         if (stripos($pseudo, '@')) {
@@ -22,9 +25,8 @@
         if ($userpassword == $password_saisi) {
             $_SESSION["user_lastname"]= $row["nom"];
             $_SESSION["user_firstname"]= $row["prenoms"];
-            echo "Connexion établie";
+            echo "Authentification Success";
         } else {
-            echo $request;
             echo "Connexion impossible";
         }
     } catch (Exception $e) {

@@ -34,22 +34,21 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-5 col-md-8">
-                        <form class="bg-white rounded shadow-5-strong p-5" method="post" action="traitements/traitement_connexion.php">
+                        <form class="bg-white rounded shadow-5-strong p-5">
                             <h3 class="card-title">Dépêchez-vous !</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Vous avez raté tellement de choses</h6>
                             <br>
                             <!-- Email input -->
                             <div class="form-outline mb-4">
-                                <input type="text" id="form1Example1" class="form-control" name="pseudo"/>
-                                <label class="form-label" for="form1Example1">e-mail/ pseudo</label>
+                                <input type="text" class="form-control" name="pseudo" id="pseudo"/>
+                                <label class="form-label" for="pseudo">e-mail/ pseudo</label>
                             </div>
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="form1Example2" class="form-control"  name="password"/>
-                                <label class="form-label" for="form1Example2">Mot de passe</label>
+                                <input type="password" class="form-control"  name="password" id="password"/>
+                                <label class="form-label" for="password">Mot de passe</label>
                             </div>
-
                             <!-- 2 column grid layout for inline styling -->
                             <div class="row mb-4">
                                 <div class="col d-flex justify-content-center">
@@ -61,6 +60,9 @@
                                             Se souvenir
                                         </label>
                                     </div>
+                                    <div id="texte_alternatif">
+
+                                    </div>
                                 </div>
 
                                 <div class="col text-center">
@@ -71,8 +73,8 @@
 
                             <!-- Submit button -->
                             <div class="row justify-content-center">
-                                <div class="text-center"><input class="btn btn-dark col-4" type="submit"
-                                        value="Se connecter" name="soumettre" />
+                                <div class="text-center"><input class="btn btn-dark col-4" type="button"
+                                        value="Se connecter" name="soumettre" id="connexion"/>
                                 </div>
                             </div>
                         </form>
@@ -88,20 +90,22 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("#objet_research").keyup(function() {
-                $("#resultat_recherche").html('');
+            $("#connexion").click(function() {
+                $("#texte_alternatif").html('');
 
-                var objet_research = $(this).val();
-                if (objet_research != "") {
+                var pseudo = $("#pseudo").val();
+                var password = $("#password").val();
+                if (pseudo != "" & password!="") {
                     $.ajax({
                         type: 'GET',
-                        url: 'traitements/traitement_research.php',
-                        data: "objet_research=" + encodeURIComponent(objet_research),
+                        url: 'traitements/traitement_connexion.php',
+                        data: "pseudo=" + encodeURIComponent(pseudo) + "&password=" + encodeURIComponent(password),
                         success: function(resultat) {
-                            if (resultat != "") {
-                                $("#resultat_recherche").append(resultat);
+                            if (resultat == "Authentification Success") {
+                                //$("#texte_alternatif").append(resultat);
+                                window.location.href = 'acc_user.php';
                             } else {
-                                document.getElementById('resultat_recherche').innerHTML = "<p>Aucun résultat</p>";
+                                document.getElementById('texte_alternatif').innerHTML = "Identifiants incorrects";
                             }
                         }
                     })
