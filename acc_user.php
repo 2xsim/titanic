@@ -37,16 +37,19 @@
 </head>
 
 <body>
-    
-
     <?php
     
-    $_SESSION['page'] = "acc_user";
-    include "includes/navbar.php";
-
-    $page = $_GET['page'];
-    include("./includes/$page.php");
+        $_SESSION['page'] = "acc_user";
+        include "includes/navbar.php";
     ?>
+    <div id="resultat_recherche">
+        
+        <?php
+            $page = $_GET['page'];
+            include("./includes/$page.php");
+        ?>  
+    </div>
+    
 
     <!--Main Navigation-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -55,7 +58,31 @@
     </script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#loupe").click(function() {
+                //La touche Entrée a été appuyée
+                var objet_research = $("#search_input").val();
+                if (objet_research.trim() != "") {
+                        $.ajax({
+                            type: 'GET',
+                            url: 'traitements/traitement_research.php',
+                            data: "objet_research=" + encodeURIComponent(objet_research),
+                            success: function(resultat) {
+                                if (resultat != "") {
+                                    window.location.href = "acc_user.php?page=resultat_recherche&objet_research=" + encodeURIComponent(objet_research);
+                                } else {
+                                    document.getElementById('resultat_recherche').innerHTML = "<p>Aucun résultat</p>";
 
+                                }
+                            }
+                        })
+                }    
+            });
+        });
+    </script>
+    
 
 </body>
 

@@ -125,7 +125,6 @@
                         encodeURIComponent(password),
                     success: function(resultat) {
                         if (resultat == "Authentification Success") {
-                            //$("#texte_alternatif").append(resultat);
                             window.location.href = 'acc_user.php';
                         } else {
                             document.getElementById('texte_alternatif').innerHTML =
