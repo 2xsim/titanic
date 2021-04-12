@@ -292,8 +292,8 @@ of Simple CSS Waves-->
                                         </div>
                                     </div>
                                     <div id="step-4" class="tab-pane" role="tabpanel">
-                                        <div class="text-center">
-                                            <input class="btn btn-col col-3" type="submit" value="Enregistrer"
+                                        <div class="text-center p-4">
+                                            <input class="btn btn-col col-4" type="submit" value="Commencer l'aventure"
                                                 id="suivant_infoPerso" name="soumettre" />
                                         </div>
                                     </div>
