@@ -121,7 +121,7 @@
         <!-- Left elements -->
         <div class="d-flex">
             <!-- Brand -->
-            <a class="navbar-brand nav-link" href="index.php">
+            <a class="navbar-brand nav-link" href="acc_user.php">
                 <strong>Titanic</strong>
             </a>
 
@@ -132,8 +132,8 @@
 
         <!-- Center elements -->
         <ul class="navbar-nav flex-row d-none d-md-flex align-items-center">
-            <li class="nav-item mx-1 active">
-                <a class="nav-link" href="acc_user.php">
+            <li class="nav-item mx-1">
+                <a class="nav-link" id="home" href="?page=home">
                     <span><i class="fas fa-home fa-lg"></i></span>
                     <span class="badge rounded-pill badge-notification bg-danger">1</span>
                 </a>
@@ -147,7 +147,7 @@
             </li>
 
             <li class="nav-item mx-1">
-                <a class="nav-link" href="?page=users">
+                <a class="nav-link" id="users" href="?page=users">
                     <span><i class="fas fa-users fa-lg"></i></span>
                     <span class="badge rounded-pill badge-notification bg-danger">2</span>
                 </a>
@@ -158,9 +158,8 @@
         <!-- Right elements -->
         <ul class="navbar-nav flex-row">
             <li class="nav-item dropdown me-3 me-lg-1">
-                <a class="nav-link" href="?page=chat" role="button">
+                <a class="nav-link" id="chat" href="?page=chat" role="button">
                     <i class="fas fa-comments fa-lg"></i>
-
                     <span class="badge rounded-pill badge-notification bg-danger">6</span>
                 </a>
             </li>
@@ -180,8 +179,8 @@
             </li>
             <!-- Avatar -->
             <li class="nav-item dropdown me-3 me-lg-1">
-                <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink"
-                    role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle d-flex align-items-center" id="avatar" href="#"
+                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                     <strong class="d-none d-sm-block mx-2"><?= $current_user_pseudo ?></strong>
                     <img src="./uploads/<?= $current_user_photo_de_profil ?>" class="rounded-circle bg-white"
                         height="26" alt="" loading="lazy" />
@@ -232,7 +231,7 @@
 
         <!-- Center elements -->
         <ul class="navbar-nav flex-row d-none d-md-flex align-items-center">
-            <li class="nav-item mx-1 active">
+            <li class="nav-item mx-1">
                 <a class="nav-link active" href="acc_user.php">
                     <span><i class="fas fa-home fa-lg"></i></span>
                 </a>
