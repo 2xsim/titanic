@@ -37,7 +37,7 @@
                         <form class="bg-white rounded shadow-5-strong p-5">
                             <h3 class="card-title">Dépêchez-vous !</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Vous avez raté tellement de choses</h6>
-                            <br>
+                            <hr>
                             <!-- Email input -->
                             <div class="row justify-content-center form-outline mb-4">
                                 <label for="pseudo" class="inp">
@@ -85,6 +85,7 @@
                                     <a href="#!">Mot de passe oublié ?</a>
                                 </div>
                             </div>
+                            <hr>
 
                             <!-- Submit button -->
                             <div class="row justify-content-center">

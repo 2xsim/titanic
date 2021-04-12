@@ -40,7 +40,7 @@ session_start();
                             <h3 class="card-title">Paré à l'abordage ?</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Des milliers de célibataires vous attendent
                             </h6>
-                            <br>
+                            <hr>
                             <div class="accordion accordion-flush" id="accordionFlushExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
@@ -273,6 +273,8 @@ session_start();
                                                     </symbol>
                                                 </svg>
                                             </div>
+
+                                            <hr>
 
                                             <div class="row justify-content-center">
                                                 <div class="text-center"><input class="btn btn-dark col-3" type="submit"
