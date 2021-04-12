@@ -15,6 +15,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css">
     <link rel="stylesheet" href="./css/style_header.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -56,18 +57,30 @@ session_start();
                                                 <!-- 2 column grid layout with text inputs for the first and last names -->
                                                 <div class="row mb-4 d-flex justify-content-center">
                                                     <div class="col-6">
-                                                        <div class="form-outline">
-                                                            <input type="text" id="prenoms" class="form-control"
-                                                                name="prenoms" required />
-                                                            <label class="form-label" for="prenoms">Prénom(s)</label>
-                                                        </div>
+                                                        <label for="prenoms" class="inp">
+                                                            <input type="text" name="prenoms" id="prenoms"
+                                                                placeholder="&nbsp;" required />
+                                                            <span class="label">Prénom(s)</span>
+                                                            <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                                                <path
+                                                                    d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
+                                                                </path>
+                                                            </svg>
+                                                            <span class="input_border"></span>
+                                                        </label>
                                                     </div>
                                                     <div class="col-4">
-                                                        <div class="form-outline">
-                                                            <input type="text" id="nom" class="form-control" name="nom"
-                                                                required />
-                                                            <label class="form-label" for="nom">Nom</label>
-                                                        </div>
+                                                        <label for="nom" class="inp">
+                                                            <input type="text" name="nom" id="nom"
+                                                                placeholder="&nbsp;" />
+                                                            <span class="label">Nom</span>
+                                                            <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                                                <path
+                                                                    d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
+                                                                </path>
+                                                            </svg>
+                                                            <span class="input_border"></span>
+                                                        </label>
                                                     </div>
                                                 </div>
 
@@ -94,7 +107,7 @@ session_start();
                                                     <div class="col-5">Date de naissance : </div>
                                                     <div class="col-5">
                                                         <div class="form-outline">
-                                                            <input type="date" id="date_de_naissance"
+                                                            <input type="date" id="date_de_naissance" max='2003-04-01'
                                                                 class="form-control" name="date_de_naissance"
                                                                 required />
                                                         </div>
@@ -127,40 +140,67 @@ session_start();
                                         <div class="accordion-body">
                                             <!-- Email input -->
                                             <div class="form-outline col-6 offset-md-3 mb-4">
-                                                <input type="email" id="adresse_email" class="form-control"
-                                                    name="adresse_email" required />
-                                                <label class="form-label" for="adresse_email">Adresse
-                                                    e-mail</label>
+                                                <label for="adresse_email" class="inp">
+                                                    <input type="text" name="adresse_email" id="adresse_email"
+                                                        pattern="(\w\.?)+@[\w\.-]+\.\w{2,4}" placeholder="&nbsp;" />
+                                                    <span class="label">Adresse e-mail</span>
+                                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="input_border"></span>
+                                                </label>
                                             </div>
 
                                             <!-- Pseudo input -->
                                             <div class="form-outline col-4 offset-md-4 mb-4">
-                                                <input type="text" id="pseudo" class="form-control" name="pseudo"
-                                                    required />
-                                                <label class="form-label" for="pseudo">Nom
-                                                    d'utilisateur</label>
-
+                                                <label for="pseudo" class="inp">
+                                                    <input type="text" name="pseudo" id="pseudo"
+                                                        pattern="[a-zA-Z0-9-_]{4, 24}" placeholder="&nbsp;" />
+                                                    <span class="label">Pseudo</span>
+                                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="input_border"></span>
+                                                </label>
                                             </div>
                                             <div id="texte_alternatif">
                                             </div>
                                             <!-- Mot de passe input -->
-                                            <div class="form-outline col-6 offset-md-3 mb-4">
-                                                <div class="form__field">
-                                                    <input type="password" class="form__input"
-                                                        placeholder="Mot de passe" id="mot_de_passe" name="mot_de_passe"
-                                                        pattern=".{6,}" required />
-                                                    <span class="icon"></span>
-                                                </div>
-                                                <small id="texte_indication" class="form-text text-muted">Le mot de
-                                                    passe doit contenir au moins 6 caractères</small>
+                                            <div class="form-outline text-center mb-4">
+                                                <label for="mot_de_passe" class="pass_inp">
+                                                    <input type="password" id="mot_de_passe" name="mot_de_passe"
+                                                        placeholder="Mot de passe" pattern=".{8,}" required>
+                                                    <svg width="280px" height="18px" viewBox="0 0 280 18"
+                                                        class="password_border">
+                                                        <path
+                                                            d="M0,12 L223.166144,12 C217.241379,12 217.899687,12 225.141066,12 C236.003135,12 241.9279,12 249.827586,12 C257.727273,12 264.639498,12 274.514107,12 C281.097179,12 281.755486,12 276.489028,12">
+                                                        </path>
+                                                    </svg>
+                                                    <svg width="14px" height="12px" viewBox="0 0 14 12" class="check">
+                                                        <path d="M1 7 5.5 11 L13 1"></path>
+                                                    </svg>
+                                                </label>
                                             </div>
 
                                             <!-- Confirmation mot de passe input -->
-                                            <div class="form-outline col-6 offset-md-3 mb-4">
-                                                <input type="password" class="form-control" id="conf_mot_de_passe"
-                                                    name="conf_mot_de_passe" required />
-                                                <label class="form-label" for="conf_mot_de_passe">Confirmation
-                                                    du mot de passe</label>
+                                            <div class="form-outline text-center mb-4">
+                                                <label for="conf_mot_de_passe" class="pass_inp">
+                                                    <input type="password" id="conf_mot_de_passe"
+                                                        name="conf_mot_de_passe"
+                                                        placeholder="Confirmation du mot de passe" pattern=".{8,}"
+                                                        required>
+                                                    <svg width="280px" height="18px" viewBox="0 0 280 18"
+                                                        class="password_border">
+                                                        <path
+                                                            d="M0,12 L223.166144,12 C217.241379,12 217.899687,12 225.141066,12 C236.003135,12 241.9279,12 249.827586,12 C257.727273,12 264.639498,12 274.514107,12 C281.097179,12 281.755486,12 276.489028,12">
+                                                        </path>
+                                                    </svg>
+                                                    <svg width="14px" height="12px" viewBox="0 0 14 12" class="check">
+                                                        <path d="M1 7 5.5 11 L13 1"></path>
+                                                    </svg>
+                                                </label>
                                             </div>
 
 
@@ -194,13 +234,13 @@ session_start();
                                                         de
                                                         profil</label>
                                                     <input type="file" class="form-control" id="photo_de_profil"
-                                                        name="photo_de_profil" />
+                                                        accept="image/*" name="photo_de_profil" />
                                                 </div>
                                                 <div class="col"><label class="form-label"
                                                         for="photo_de_couverture">Photo de
                                                         couverture</label>
                                                     <input type="file" class="form-control" id="photo_de_couverture"
-                                                        name="photo_de_couverture" />
+                                                        accept="image/*" name="photo_de_couverture" />
                                                 </div>
 
                                             </div>
@@ -208,13 +248,30 @@ session_start();
                                                 <textarea class="form-control" id="bio" rows="4" name="bio"></textarea>
                                                 <label class="form-label" for="bio">Bio</label>
                                             </div>
-                                            <div class="mb-4"><select class="form-select"
-                                                    aria-label="Default select example" name="raison">
-                                                    <option selected>Raison</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                </select>
+                                            <div class="text-center mb-4">
+                                                <label class="select" for="slct">
+                                                    <select id="slct" name="raison" required="required">
+                                                        <option value="" disabled="disabled" selected="selected">
+                                                            Raison
+                                                        </option>
+                                                        <option value="1">Relation sérieuse</option>
+                                                        <option value="2">Coup d'un soir</option>
+                                                        <option value="3">Se faire de nouvelles connaissances</option>
+                                                        <option value="#">Four</option>
+                                                        <option value="#">Five</option>
+                                                        <option value="#">Six</option>
+                                                        <option value="#">Seven</option>
+                                                    </select>
+                                                    <svg>
+                                                        <use xlink:href="#select-arrow-down"></use>
+                                                    </svg>
+                                                </label>
+                                                <!-- SVG Sprites-->
+                                                <svg class="sprites">
+                                                    <symbol id="select-arrow-down" viewbox="0 0 10 6">
+                                                        <polyline points="1 1 5 5 9 1"></polyline>
+                                                    </symbol>
+                                                </svg>
                                             </div>
 
                                             <div class="row justify-content-center">
@@ -225,6 +282,7 @@ session_start();
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </form>
 
                     </div>
@@ -236,6 +294,8 @@ session_start();
     <!--Main Navigation-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
     <script>
     function checkPassword(form) {
         mot_de_passe = form.mot_de_passe.value;
@@ -281,7 +341,7 @@ session_start();
     </script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
 
 </body>
 

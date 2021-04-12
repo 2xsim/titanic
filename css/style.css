@@ -52,28 +52,28 @@
 
 /*Fin CSS mots de paasse input*/
 
-.inp {
+.pass_inp {
     position: relative;
     margin: auto;
     width: 100%;
     max-width: 280px;
     height: 53px;
 }
-.inp .password_border {
+.pass_inp .password_border {
     position: absolute;
     left: 0;
     bottom: 0;
     height: 18px;
     fill: none;
 }
-.inp .password_border path {
+.pass_inp .password_border path {
     stroke: #c8ccd4;
     stroke-width: 2;
 }
-.inp .password_border path d {
+.pass_inp .password_border path d {
     transition: all 0.2s ease;
 }
-.inp .check {
+.pass_inp .check {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -82,11 +82,11 @@
     transition: all 0.3s cubic-bezier(0.5, 0.9, 0.25, 1.3);
     transition-delay: 0.15s;
 }
-.inp .check path {
+.pass_inp .check path {
     stroke: #07f;
     stroke-width: 2;
 }
-.inp input {
+.pass_inp input {
     -webkit-appearance: none;
     width: 100%;
     border: 0;
@@ -100,22 +100,22 @@
     color: #223254;
     transition: all 0.15s ease;
 }
-.inp input:focus {
+.pass_inp input:focus {
     outline: none;
 }
-.inp input:focus + .password_border path {
+.pass_inp input:focus + .password_border path {
     stroke: #07f;
 }
-.inp input:valid + .password_border path {
-    animation: elasticInput 0.8s ease forwards;
+.pass_inp input:valid + .password_border path {
+    animation: elasticPassword 0.8s ease forwards;
 }
-.inp input:valid + .password_border + .check {
+.pass_inp input:valid + .password_border + .check {
     transform: translate(0, 0) scale(1);
 }
 ::placeholder {
     color: #9098a9;
 }
-@-moz-keyframes elasticInput {
+@-moz-keyframes elasticPassword {
     33% {
         d: path(
             "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,1 253,1 C261,1 268,12 278,12 C284.666667,12 285.333333,12 280,12"
@@ -125,92 +125,190 @@
         d: path(
             "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,17 253,17 C261,17 268,12 278,12 C284.666667,12 285.333333,12 280,12"
         );
+    }
+}
+@-webkit-keyframes elasticPassword {
+    33% {
+        d: path(
+            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,1 253,1 C261,1 268,12 278,12 C284.666667,12 285.333333,12 280,12"
+        );
+    }
+    66% {
+        d: path(
+            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,17 253,17 C261,17 268,12 278,12 C284.666667,12 285.333333,12 280,12"
+        );
+    }
+}
+@-o-keyframes elasticPassword {
+    33% {
+        d: path(
+            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,1 253,1 C261,1 268,12 278,12 C284.666667,12 285.333333,12 280,12"
+        );
+    }
+    66% {
+        d: path(
+            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,17 253,17 C261,17 268,12 278,12 C284.666667,12 285.333333,12 280,12"
+        );
+    }
+}
+@keyframes elasticPassword {
+    33% {
+        d: path(
+            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,1 253,1 C261,1 268,12 278,12 C284.666667,12 285.333333,12 280,12"
+        );
+    }
+    66% {
+        d: path(
+            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,17 253,17 C261,17 268,12 278,12 C284.666667,12 285.333333,12 280,12"
+        );
+    }
+}
+
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+}
+.inp .label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 16px;
+    color: #9098a9;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transition: all 0.2s ease;
+}
+.inp svg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 26px;
+    fill: none;
+}
+.inp svg path {
+    stroke: #c8ccd4;
+    stroke-width: 2;
+}
+.inp svg path d {
+    transition: all 0.2s ease;
+}
+.inp .input_border {
+    position: absolute;
+    bottom: 0;
+    left: 120px;
+    height: 2px;
+    right: 0;
+    background: #c8ccd4;
+}
+.inp input {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 12px 0;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    background: none;
+    border-radius: 0;
+    color: #223254;
+    transition: all 0.15s ease;
+}
+.inp input:not(:placeholder-shown) + span {
+    color: #5a667f;
+    transform: translateY(-26px) scale(0.75);
+}
+.inp input:focus {
+    background: none;
+    outline: none;
+}
+.inp input:focus + span {
+    color: #07f;
+    transform: translateY(-26px) scale(0.75);
+    transition-delay: 0.1s;
+}
+.inp input:focus + span + svg path {
+    stroke: #07f;
+    animation: elasticInput 0.4s ease forwards;
+}
+.inp input:focus + span + svg + .input_border {
+    background: #07f;
+}
+
+@-moz-keyframes elasticInput {
+    50% {
+        d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
     }
 }
 @-webkit-keyframes elasticInput {
-    33% {
-        d: path(
-            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,1 253,1 C261,1 268,12 278,12 C284.666667,12 285.333333,12 280,12"
-        );
-    }
-    66% {
-        d: path(
-            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,17 253,17 C261,17 268,12 278,12 C284.666667,12 285.333333,12 280,12"
-        );
+    50% {
+        d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
     }
 }
 @-o-keyframes elasticInput {
-    33% {
-        d: path(
-            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,1 253,1 C261,1 268,12 278,12 C284.666667,12 285.333333,12 280,12"
-        );
-    }
-    66% {
-        d: path(
-            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,17 253,17 C261,17 268,12 278,12 C284.666667,12 285.333333,12 280,12"
-        );
+    50% {
+        d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
     }
 }
 @keyframes elasticInput {
-    33% {
-        d: path(
-            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,1 253,1 C261,1 268,12 278,12 C284.666667,12 285.333333,12 280,12"
-        );
-    }
-    66% {
-        d: path(
-            "M0,12 L226,12 C220,12 220.666667,12 228,12 C239,12 245,17 253,17 C261,17 268,12 278,12 C284.666667,12 285.333333,12 280,12"
-        );
+    50% {
+        d: path("M2,2 C21,17 46,25 74,25 C102,25 118,25 120,25");
     }
 }
 
-@import url("https://rsms.me/inter/inter-ui.css");
-
-.input_container {
-    display: flex;
-    flex-direction: column;
+.select {
     position: relative;
-    width: 320px;
+    min-width: 200px;
 }
-.input_container .placeholder {
-    transform-origin: 0 50%;
-    transform: translateX(10px);
-}
-.input_container .placeholder.expand {
-    animation: MovePlaceholder 220ms both linear;
-}
-.input_container .placeholder.return {
-    animation: ReturnPlaceholder 220ms both linear;
-}
-.input_container input {
-    background: transparent;
-    border: 0;
-    font-size: 20px;
-    height: 30px;
-    outline: none !important;
+.select svg {
     position: absolute;
-    top: -12px;
+    right: 12px;
+    top: calc(50% - 3px);
+    width: 10px;
+    height: 6px;
+    stroke-width: 2px;
+    stroke: #9098a9;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
 }
-.input_container svg {
-    position: relative;
-    top: -25px;
+.select select {
+    -webkit-appearance: none;
+    padding: 7px 40px 7px 12px;
+    width: 100%;
+    border: 1px solid #e8eaed;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 1px 3px -2px #9098a9;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 150ms ease;
 }
-@keyframes MovePlaceholder {
-    0% {
-        transform: translateX(10px) translateY(0) rotate(0);
-    }
-    60% {
-        transform: translateX(4px) translateY(-8px) rotate(-18deg) scale(0.92);
-    }
-    100% {
-        transform: translateX(0) translateY(-30px) rotate(0deg) scale(0.75);
-    }
+.select select:required:invalid {
+    color: #5a667f;
 }
-@keyframes ReturnPlaceholder {
-    0% {
-        transform: translateX(0) translateY(-30px) scale(0.75);
-    }
-    100% {
-        transform: translateX(10px) translateY(0);
-    }
+.select select option {
+    color: #223254;
+}
+.select select option[value=""][disabled] {
+    display: none;
+}
+.select select:focus {
+    outline: none;
+    border-color: #07f;
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+.select select:hover + svg {
+    stroke: #07f;
+}
+.sprites {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
 }
