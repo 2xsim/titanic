@@ -37,26 +37,23 @@
                         <form class="bg-white rounded shadow-5-strong p-5">
                             <h3 class="card-title">Dépêchez-vous !</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Vous avez raté tellement de choses</h6>
-                            <br>
+                            <hr>
                             <!-- Email input -->
-                            <div class="form-outline mb-4">
-                                <input type="text" class="form-control" name="pseudo" id="pseudo" />
-                                <label class="form-label" for="pseudo">e-mail/ pseudo</label>
+                            <div class="row justify-content-center form-outline mb-4">
+                                <label for="pseudo" class="inp">
+                                    <input type="text" name="pseudo" id="pseudo" placeholder="&nbsp;" required />
+                                    <span class="label">E-mail/Pseudo</span>
+                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25"></path>
+                                    </svg>
+                                    <span class="input_border"></span>
+                                </label>
                             </div>
-
-                            <div class="input_container">
-                                <div class="placeholder">Nom</div>
-                                <svg viewBox="0 0 320 100" width="320" height="100">
-                                    <path stroke="#000" stroke-width="2" fill="none" />
-                                </svg>
-                                <input type="text" />
-                            </div>
-
                             <!-- Password input -->
                             <div class="row justify-content-center form-outline mb-4">
-                                <label for="inp" class="inp">
-                                    <input type="password" id="password" placeholder="Mot de passe" pattern=".{8,}"
-                                        required>
+                                <label for="password" class="pass_inp">
+                                    <input type="password" id="password" name="password" placeholder="Mot de passe"
+                                        pattern=".{8,}" required>
                                     <svg width="280px" height="18px" viewBox="0 0 280 18" class="password_border">
                                         <path
                                             d="M0,12 L223.166144,12 C217.241379,12 217.899687,12 225.141066,12 C236.003135,12 241.9279,12 249.827586,12 C257.727273,12 264.639498,12 274.514107,12 C281.097179,12 281.755486,12 276.489028,12">
@@ -88,6 +85,7 @@
                                     <a href="#!">Mot de passe oublié ?</a>
                                 </div>
                             </div>
+                            <hr>
 
                             <!-- Submit button -->
                             <div class="row justify-content-center">
@@ -125,6 +123,7 @@
                         encodeURIComponent(password),
                     success: function(resultat) {
                         if (resultat == "Authentification Success") {
+                            //$("#texte_alternatif").append(resultat);
                             window.location.href = 'acc_user.php';
                         } else {
                             document.getElementById('texte_alternatif').innerHTML =
