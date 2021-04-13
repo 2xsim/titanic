@@ -1,19 +1,24 @@
-<?php 
-    session_start();
-    
-    $current_user_pseudo = $_SESSION["current_user_pseudo"];
-    $current_user_lastname =$_SESSION["current_user_lastname"];
-    $current_user_firstname=$_SESSION["current_user_firstname"];
-    $current_user_sexe = $_SESSION["current_user_sexe"];
-    $current_user_date_de_naissance = $_SESSION["current_user_date_de_naissance"];
-    $current_user_adresse_email = $_SESSION["current_user_adresse_email"];
-    $current_user_photo_de_profil = $_SESSION["current_user_photo_de_profil"];
-    $current_user_photo_de_couverture = $_SESSION["current_user_photo_de_couverture"];
-    $current_user_bio = $_SESSION["current_user_bio"];
-    $current_user_raison = $_SESSION["current_user_raison"];
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
+<?php 
+    session_start();
+    if (!isset($_SESSION["current_user_pseudo"])) {
+        header('Location:connexion.php');
+    }else {
+        $current_user_pseudo = $_SESSION["current_user_pseudo"];
+        $current_user_lastname =$_SESSION["current_user_lastname"];
+        $current_user_firstname=$_SESSION["current_user_firstname"];
+        $current_user_sexe = $_SESSION["current_user_sexe"];
+        $current_user_date_de_naissance = $_SESSION["current_user_date_de_naissance"];
+        $current_user_adresse_email = $_SESSION["current_user_adresse_email"];
+        $current_user_photo_de_profil = $_SESSION["current_user_photo_de_profil"];
+        $current_user_photo_de_couverture = $_SESSION["current_user_photo_de_couverture"];
+        $current_user_bio = $_SESSION["current_user_bio"];
+        $current_user_raison = $_SESSION["current_user_raison"];
+    }
+    
+?>
 
 <head>
     <meta charset="UTF-8" />
@@ -82,8 +87,8 @@
             });
         });
     </script>
-    
 
+    
 </body>
 
 </html>
