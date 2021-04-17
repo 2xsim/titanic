@@ -83,7 +83,7 @@ try {
     $_SESSION["current_user_photo_de_couverture"]= $photo_de_couverture;
     $_SESSION["current_user_bio"]= stripslashes($bio);
     $_SESSION["current_user_raison"]= $_SESSION["ref_raison"][$raison];
-    header("Location:../acc_user.php");
+    header("Location:../new_user.php");
 } catch (Exception $e) {
     echo ("Impossible de traiter les données. Erreur : " . $e->getMessage());
 }

@@ -196,7 +196,7 @@
                                 settings
                             </span>Paramètres</a></li>
                     <li class="divider dropdown-divider"></li>
-                    <li><a class="dropdown-item d-flex align-items-center justify-content-center" href="#"><span
+                    <li><a class="dropdown-item d-flex align-items-center justify-content-center" href="traitements/traitement_deconnexion.php"><span
                                 class="material-icons-outlined me-1">
                                 power_settings_new
                             </span>Déconnexion</a>
