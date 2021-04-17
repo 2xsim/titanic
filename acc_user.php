@@ -16,8 +16,8 @@
         $current_user_raison = $_SESSION["current_user_raison"];
     }
     ?>
-    
-    
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -51,7 +51,12 @@
     <div id="resultat_recherche">
 
         <?php
-            $page = $_GET['page'];
+            if (!isset($_GET['page'])) {
+                $page = "home";
+            }
+            else {
+                $page = $_GET['page'];
+            }
             include("./includes/$page.php");
         ?>
     </div>
