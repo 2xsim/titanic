@@ -161,7 +161,7 @@
                                     <input type="password" class="form-control" name="confirmation_mdp" id="confirmation_mdp">
                                 </div>
                                 <div class="text-end mt-3">
-                                    <input type="button" class="btn btn-primary" id="modifyPassword" disabled value="Valider la modifffication">
+                                    <input type="button" class="btn btn-primary" id="modifyPassword" disabled value="Valider la modification">
                                 </div>
                             </div>
                         </div>
