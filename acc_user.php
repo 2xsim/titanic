@@ -10,10 +10,17 @@
         $current_user_sexe = $_SESSION["current_user_sexe"];
         $current_user_date_de_naissance = $_SESSION["current_user_date_de_naissance"];
         $current_user_adresse_email = $_SESSION["current_user_adresse_email"];
+        $current_user_mot_de_passe= $_SESSION["current_user_mot_de_passe"];
         $current_user_photo_de_profil = $_SESSION["current_user_photo_de_profil"];
         $current_user_photo_de_couverture = $_SESSION["current_user_photo_de_couverture"];
         $current_user_bio = $_SESSION["current_user_bio"];
         $current_user_raison = $_SESSION["current_user_raison"];
+        $current_user_hobbies = $_SESSION["current_user_hobbies"];
+        $current_user_profession = $_SESSION["current_user_profession"];
+        $current_user_lieu_habitation = $_SESSION["current_user_lieu_habitation"];
+        $current_user_compte_facebook = $_SESSION["current_user_compte_facebook"];
+        $current_user_compte_instagram = $_SESSION["current_user_compte_instagram"];
+        $current_user_compte_twitter = $_SESSION["current_user_compte_twitter"];
     }
     ?>
 

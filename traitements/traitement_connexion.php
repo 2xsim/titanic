@@ -29,10 +29,17 @@
             $_SESSION["current_user_sexe"]= $row["sexe"];
             $_SESSION["current_user_date_de_naissance"]= $row["date_de_naissance"];
             $_SESSION["current_user_adresse_email"]= $row["adresse_email"];
+            $_SESSION["current_user_mot_de_passe"]= $row["mot_de_passe"];
             $_SESSION["current_user_photo_de_profil"]= $row["photo_de_profil"];
             $_SESSION["current_user_photo_de_couverture"]= $row["photo_de_couverture"];
             $_SESSION["current_user_bio"]= stripslashes($row["bio"]);
             $_SESSION["current_user_raison"]= $_SESSION["ref_raison"][$row["raison"]];
+            $_SESSION["current_user_hobbies"]= $row["hobbies"];
+            $_SESSION["current_user_profession"]= $row["profession"];
+            $_SESSION["current_user_lieu_habitation"]= $row["lieu_habitation"];
+            $_SESSION["current_user_compte_facebook"]= $row["compte_facebook"];
+            $_SESSION["current_user_compte_instagram"]= $row["compte_instagram"];
+            $_SESSION["current_user_compte_twitter"]= $row["compte_twitter"];
             echo "Authentification Success";
         } else {
             echo "Connexion impossible";

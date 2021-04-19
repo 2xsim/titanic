@@ -21,7 +21,7 @@ echo $bio;
 if (!empty($_FILES['photo_de_profil']['name'])) {
     # code...
     //$photo_de_profil = "../uploads/" . $_FILES['photo_de_profil']['name'];
-    $photo_de_profil = "../uploads/pp_" . $pseudo . "jpg";
+    $photo_de_profil = "../uploads/pp_" . $pseudo . ".jpg";
 } else {
     # code...
     $photo_de_profil = NULL;
@@ -30,7 +30,7 @@ if (!empty($_FILES['photo_de_profil']['name'])) {
 if (!empty($_FILES['photo_de_couverture']['name'])) {
     # code...
     //$photo_de_couverture = "../uploads/" . $_FILES['photo_de_couverture']['name'];
-    $photo_de_couverture = "../uploads/pc_" . $pseudo . "jpg";
+    $photo_de_couverture = "../uploads/pc_" . $pseudo . ".jpg";
 } else {
     # code...
     $photo_de_couverture = NULL;

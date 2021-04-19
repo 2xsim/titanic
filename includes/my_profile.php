@@ -24,8 +24,8 @@
                                         }
                                     ?>
                                 </h4>
-                                <p class="text-secondary mb-1">Etudiant</p>
-                                <p class="text-muted font-size-sm">Marrakech, Maroc</p>
+                                <p class="text-secondary mb-1"><?= $current_user_profession ?></p>
+                                <p class="text-muted font-size-sm"><?= $current_user_lieu_habitation ?></p>
                                 <a class="btn btn-primary" href="?page=settings">Modifier mon profil</a>
                             </div>
                         </div>
@@ -40,16 +40,16 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0"><i class="fab fa-facebook-square fa-lg mx-1 text-primary"></i>Facebook
                             </h6>
-                            <span class="text-secondary">-</span>
+                            <span class="text-secondary"><?= $current_user_compte_facebook ?></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0"><i class="fab fa-instagram-square fa-lg mx-1 text-danger"></i>Instagram
                             </h6>
-                            <span class="text-secondary">-</span>
+                            <span class="text-secondary">https://www.instagram.com/<?= $current_user_compte_instagram ?></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0"><i class="fab fa-twitter-square fa-lg mx-1 text-info"></i>Twitter</h6>
-                            <span class="text-secondary">-</span>
+                            <span class="text-secondary">https://www.twitter.com/<?= $current_user_compte_twitter ?></span>
                         </li>
 
 
@@ -121,10 +121,14 @@
                                 <hr>
                                 <h6><i class="fab fa-gratipay text-danger fa-lg me-1"></i>Hobbies</h6>
                                 <ul>
-                                    <li>Viverra tellus non</li>
-                                    <li>Maecenas nec augue
-                                        placerat</li>
-                                    <li>Pulvinar risus</li>
+                                    <?php
+                                        $hobbies = explode(",", $current_user_hobbies);
+                                        foreach ($hobbies as $key => $value) {
+                                            ?>
+                                                <li><?= $value ?></li>
+                                            <?php
+                                        }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
