@@ -122,7 +122,7 @@ of Simple CSS Waves-->
                                     </li>
                                     <li>
                                         <a class="nav-link" href="#step-2">
-                                            Compléments d'informations personnelles
+                                            Compléments
                                         </a>
                                     </li>
                                     <li>
@@ -167,133 +167,273 @@ of Simple CSS Waves-->
                                                 </label>
                                             </div>
                                         </div>
+                                        <div class="row p-4">
+                                            <div class="col-md-4">
+                                                <label for="facebook" class="inp">
+                                                    <input type="text" name="facebook" id="facebook"
+                                                        placeholder="&nbsp;" />
+                                                    <span class="label">Facebook</span>
+                                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="input_border"></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="instagram" class="inp">
+                                                    <input type="text" name="instagram" id="instagram"
+                                                        placeholder="&nbsp;" />
+                                                    <span class="label">Instagram</span>
+                                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="input_border"></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="twitter" class="inp">
+                                                    <input type="text" name="twitter" id="twitter"
+                                                        placeholder="&nbsp;" />
+                                                    <span class="label">Twitter</span>
+                                                    <svg width="120px" height="26px" viewBox="0 0 120 26">
+                                                        <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="input_border"></span>
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div id="step-3" class="tab-pane" role="tabpanel">
-                                        <div class="p-4">
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="sport" value="sport">
-                                                <label for="sport" class="text-dark ps-2">Sport</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="cuisine" value="cuisine">
-                                                <label for="cuisine" class="text-dark ps-2">Cuisine</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="couture" value="couture">
-                                                <label for="couture" class="text-dark ps-2">Couture</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="jeux_video"
-                                                    value="jeux_video">
-                                                <label for="jeux_video" class="text-dark ps-2">Jeux video</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="musique" value="musique">
-                                                <label for="musique" class="text-dark ps-2">Musique</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="peinture"
-                                                    value="peinture">
-                                                <label for="peinture" class="text-dark ps-2">Peinture</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="ecriture"
-                                                    value="ecriture">
-                                                <label for="ecriture" class="text-dark ps-2">Ecriture</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="photographie"
-                                                    value="photographie">
-                                                <label for="photographie" class="text-dark ps-2">Photographie</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="jardinage"
-                                                    value="jardinage">
-                                                <label for="jardinage" class="text-dark ps-2">Jardinage</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="lecture" value="lecture">
-                                                <label for="lecture" class="text-dark ps-2">Lecture</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="danse" value="danse">
-                                                <label for="danse" class="text-dark ps-2">Danse</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="peche" value="peche">
-                                                <label for="peche" class="text-dark ps-2">Pêche</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="cinema" value="cinema">
-                                                <label for="cinema" class="text-dark ps-2">Cinema</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="sorties" value="sorties">
-                                                <label for="sorties" class="text-dark ps-2">Sorties</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="technologie"
-                                                    value="technologie">
-                                                <label for="technologie" class="text-dark ps-2">Technologie</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="mode" value="mode">
-                                                <label for="mode" class="text-dark ps-2">Mode</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="voyages" value="voyages">
-                                                <label for="voyages" class="text-dark ps-2">Voyages</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="bricolage"
-                                                    value="bricolage">
-                                                <label for="bricolage" class="text-dark ps-2">Bricolage</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="chasse" value="chasse">
-                                                <label for="chasse" class="text-dark ps-2">Chasse</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="reseaux_sociaux"
-                                                    value="reseaux_sociaux">
-                                                <label for="reseaux_sociaux" class="text-dark ps-2">Réseaux
-                                                    sociaux</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="jeux_de_societe"
-                                                    value="jeux_de_societe">
-                                                <label for="jeux_de_societe" class="text-dark ps-2">Jeux de
-                                                    société</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="maquillage"
-                                                    value="maquillage">
-                                                <label for="maquillage" class="text-dark ps-2">Maquillage</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="coiffure"
-                                                    value="coiffure">
-                                                <label for="coiffure" class="text-dark ps-2">Coiffure</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="conduite"
-                                                    value="conduite">
-                                                <label for="conduite" class="text-dark ps-2">Conduite</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="dessin" value="dessin">
-                                                <label for="dessin" class="text-dark ps-2">Dessin</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="shopping"
-                                                    value="shopping">
-                                                <label for="shopping" class="text-dark ps-2">Shopping</label>
-                                            </div>
-                                            <div class="d-inline-flex align-items-center m-1">
-                                                <input type="checkbox" class="plus-minus" id="nouriture"
-                                                    value="nouriture">
-                                                <label for="nouriture" class="text-dark ps-2">Nouriture</label>
-                                            </div>
+                                        <div class="p-4 hobbies">
+                                            <ul>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-gamepad"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-music"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-paint-brush"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-camera-retro"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-book-open"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-film"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-glass-cheers"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fas fa-plane" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-battery-full" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-code" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-plane" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-battery-full" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-code" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-plane" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-battery-full" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-code" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-plane" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" name="">
+                                                        <div class="icon-box">
+                                                            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                                                        </div>
+                                                    </label>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div id="step-4" class="tab-pane" role="tabpanel">
