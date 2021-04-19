@@ -28,25 +28,24 @@
 
                             <div class="d-flex flew-row mt-3">
                                 <div class="card-body d-flex media align-items-center">
-                                    <img src="./uploads/<?= $current_user_photo_de_profil ?>" alt=""
-                                        class="d-block ui-w-80">
+                                    <img src="./uploads/<?= $current_user_photo_de_profil ?>" alt="photo_profil"
+                                        class="d-block ui-w-80" id="photo_profil">
                                     <div class="media-body ms-4">
                                         <label class="btn btn-primary">
                                             Nouvelle photo de profil
-                                            <input type="file" class="account-settings-fileinput" name="photo_de_profil" accept="image/*">
+                                            <input type="file" class="account-settings-fileinput" name="photo_de_profil" accept="image/*" onchange="showPreview_pp(event);">
                                         </label> &nbsp;
-                                        <button type="button" class="btn btn-default md-btn-flat">Supprimer</button>
 
                                         <div class="text-light small mt-1">Seulement JPG, GIF ou PNG. Max size of 800K</div>
                                     </div>
                                 </div>
 
                                 <div class="card-body d-flex media align-items-center">
-                                    <img src="./uploads/<?= $current_user_photo_de_couverture ?>" alt="" class="d-block ui-w-150">
+                                    <img src="./uploads/<?= $current_user_photo_de_couverture ?>" alt="photo_couverture" class="d-block ui-w-150" id="photo_de_couverture">
                                     <div class="media-body ms-4">
                                         <label class="btn btn-primary">
                                             Nouvelle photo de couverture
-                                            <input type="file" class="account-settings-fileinput" name="photo_de_couverture" accept="image/*">
+                                            <input type="file" class="account-settings-fileinput" name="photo_de_couverture" accept="image/*" onchange="showPreview_pc(event);">
                                         </label> &nbsp;
                                         <button type="button" class="btn btn-default md-btn-flat">Supprimer</button>
 
@@ -277,3 +276,5 @@
         </div>
     </form>
 </div>
+
+<script src="js/settings.js"></script>

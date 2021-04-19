@@ -51,15 +51,19 @@ if (isset($_POST["soumettre"])) {
             if ($_SESSION["current_user_photo_de_couverture"] != $_FILES['photo_de_couverture']['name']) {
                 $photo_de_couverture = "../uploads/pc_" . $pseudo . ".jpg";
                 //on déplace le fichier dans le fichier
-                if (unlink($photo_de_couverture) and move_uploaded_file($_FILES['photo_de_couverture']['tmp_name'], $photo_de_couverture) ) {
-                } else {
-                    //il y a eu une erreur
-                    echo "<p>Erreur lors du déplacement du fichier $photo_de_couverture</p>";
+                if (!empty($_SESSION["current_user_photo_de_couverture"])) {
+                    try {
+                        unlink($photo_de_couverture);
+                    } catch (\Throwable $th) {
+                        //il y a eu une erreur
+                        echo "<p>Erreur lors du déplacement du fichier $photo_de_couverture</p>";
+                    }
                 }
+                move_uploaded_file($_FILES['photo_de_couverture']['tmp_name'], $photo_de_couverture);
             }
             
         } else {
-            
+            $photo_de_couverture = $_SESSION["current_user_photo_de_couverture"];
         }
 
         
