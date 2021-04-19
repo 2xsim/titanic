@@ -47,6 +47,7 @@
     <link rel="stylesheet" href="./css/style_users.css">
     <link rel="stylesheet" href="./css/style_settings.css">
     <link rel="stylesheet" href="./css/style_user.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -76,7 +77,6 @@
     </script>
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
     $(document).ready(function() {
         $("#loupe").click(function() {

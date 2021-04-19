@@ -3,7 +3,7 @@
     <h2 class="font-weight-bold py-3 my-2 ms-2">
         Paramètres
     </h2>
-    <form action="./traitements/traitement_modification_profil.php" method="post" enctype="multipart/form-data">
+    <form action="./traitements/traitement_modification_profil.php" method="post" enctype="multipart/form-data" autocomplete = "off">
         <div class="card overflow-hidden">
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-3 pt-0">
@@ -15,10 +15,6 @@
                             href="#account-social-links">Réseaux sociaux</a>
                         <a class="list-group-item list-group-item-action" data-toggle="list"
                             href="#account-change-password">Sécurité</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-connections">Connections</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-notifications">Notifications</a>
                     </div>
                 </div>
 
@@ -152,117 +148,21 @@
 
                                 <div class="form-group col-7">
                                     <label class="form-label">Mot de passe actuel</label>
-                                    <input type="password" class="form-control" name="mdp_actuel">
+                                    <input type="password" class="form-control" autocomplete="new-password" name="mdp_actuel" id="mdp_actuel">
                                 </div>
 
                                 <div class="form-group my-3 col-7">
                                     <label class="form-label" >Nouveau mot de passe</label>
-                                    <input type="password" class="form-control" name="nouveau_mdp">
+                                    <input type="password" class="form-control" name="nouveau_mdp" id ="nouveau_mdp">
                                 </div>
 
                                 <div class="form-group col-7">
                                     <label class="form-label">Confirmation du nouveau mot de passe</label>
-                                    <input type="password" class="form-control" name="confirmation_mdp">
+                                    <input type="password" class="form-control" name="confirmation_mdp" id="confirmation_mdp">
                                 </div>
-
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="account-connections">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-twitter">Connect to <strong>Twitter</strong></button>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body">
-                                <h5 class="mb-2">
-                                    <a href="javascript:void(0)" class="float-right text-muted text-tiny"><i
-                                            class="ion ion-md-close"></i> Remove</a>
-                                    <i class="ion ion-logo-google text-google"></i>
-                                    You are connected to Google:
-                                </h5>
-                                nmaxwell@mail.com
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-facebook">Connect to <strong>Facebook</strong></button>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-instagram">Connect to
-                                    <strong>Instagram</strong></button>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="account-notifications">
-                            <div class="card-body pb-2">
-
-                                <h6 class="mb-4">Activity</h6>
-
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked="">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Email me when someone comments on my article</span>
-                                    </label>
+                                <div class="text-end mt-3">
+                                    <input type="button" class="btn btn-primary" id="modifyPassword" disabled value="Valider la modifffication">
                                 </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked="">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Email me when someone answers on my forum thread</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Email me when someone follows me</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body pb-2">
-
-                                <h6 class="mb-4">Application</h6>
-
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked="">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">News and announcements</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Weekly product updates</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="switcher">
-                                        <input type="checkbox" class="switcher-input" checked="">
-                                        <span class="switcher-indicator">
-                                            <span class="switcher-yes"></span>
-                                            <span class="switcher-no"></span>
-                                        </span>
-                                        <span class="switcher-label">Weekly blog digest</span>
-                                    </label>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -278,3 +178,54 @@
 </div>
 
 <script src="js/settings.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        $("#mdp_actuel").keyup(function() {
+            activeModifyPasswordButton()
+        });
+
+        $("#nouveau_mdp").keyup(function() {
+            activeModifyPasswordButton()
+        });
+
+        $("#confirmation_mdp").keyup(function() {
+            activeModifyPasswordButton()
+        });
+
+
+        function activeModifyPasswordButton(){
+            var mdp_actuel = $("#mdp_actuel").val();
+            var nouveau_mdp = $("#nouveau_mdp").val();
+            var confirmation_mdp = $("#confirmation_mdp").val();
+            if ((nouveau_mdp != "") && (confirmation_mdp != "" )) {
+               if (mdp_actuel == "<?= $current_user_mot_de_passe ?>" && (nouveau_mdp==confirmation_mdp) ) {
+                    $("#modifyPassword").prop("disabled", false);
+                }else{
+                    $("#modifyPassword").prop("disabled", true);
+                }
+            }else{
+                    $("#modifyPassword").prop("disabled", true);
+            }
+            
+        }
+        
+        $("#modifyPassword").click(function() {
+            var nouveau_mdp = $("#nouveau_mdp").val();
+            $.ajax({
+                    type: 'GET',
+                    url: 'traitements/traitement_modification_mdp.php',
+                    data: "nouveau_mdp=" + encodeURIComponent(nouveau_mdp),
+                    success: function(resultat) {
+                        if (resultat == "Success") {
+                            location.reload(true);
+                        } else {
+                            alert("Erreur");
+                        }
+                    }
+                })
+        });
+    });
+
+</script>
