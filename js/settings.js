@@ -1,4 +1,4 @@
-function showPreview_pp(event){
+function show_pp(event){
     if(event.target.files.length = 1){
       var src = URL.createObjectURL(event.target.files[0]);
       var preview = document.getElementById("photo_profil");
@@ -15,7 +15,7 @@ function showPreview_pp(event){
     }
 }
 
-function showPreview_pc(event){
+function show_pc(event){
     if(event.target.files.length = 1){
       var src = URL.createObjectURL(event.target.files[0]);
       var preview = document.getElementById("photo_de_couverture");

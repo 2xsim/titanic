@@ -7,12 +7,7 @@
         $current_user_lastname =$_SESSION["current_user_lastname"];
         $current_user_firstname=$_SESSION["current_user_firstname"];
         $current_user_sexe = $_SESSION["current_user_sexe"];
-        $current_user_date_de_naissance = $_SESSION["current_user_date_de_naissance"];
-        $current_user_adresse_email = $_SESSION["current_user_adresse_email"];
         $current_user_photo_de_profil = $_SESSION["current_user_photo_de_profil"];
-        $current_user_photo_de_couverture = $_SESSION["current_user_photo_de_couverture"];
-        $current_user_bio = $_SESSION["current_user_bio"];
-        $current_user_raison = $_SESSION["current_user_raison"];
     }
     
     
@@ -100,7 +95,7 @@ of Simple CSS Waves-->
             </button>
         </div>
 
-        <form action="" method="post">
+        <form action="traitements/traitement_new_user.php" method="post">
             <!-- The Modal -->
             <div class="modal fade" id="config_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -145,7 +140,7 @@ of Simple CSS Waves-->
                                             <div class="col-md-6">
                                                 <label for="lieu_d_habitation" class="inp">
                                                     <input type="text" name="lieu_d_habitation" id="lieu_d_habitation"
-                                                        placeholder="&nbsp;" />
+                                                        placeholder="&nbsp;" required/>
                                                     <span class="label">Lieu d'habitation</span>
                                                     <svg width="120px" height="26px" viewBox="0 0 120 26">
                                                         <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
@@ -157,7 +152,7 @@ of Simple CSS Waves-->
                                             <div class="col-md-6">
                                                 <label for="profession" class="inp">
                                                     <input type="text" name="profession" id="profession"
-                                                        placeholder="&nbsp;" />
+                                                        placeholder="&nbsp;" required/>
                                                     <span class="label">Profession</span>
                                                     <svg width="120px" height="26px" viewBox="0 0 120 26">
                                                         <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
@@ -211,7 +206,7 @@ of Simple CSS Waves-->
                                             <ul>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Jeux vidéos">
                                                         <div class="icon-box">
                                                             <i class="fas fa-gamepad"></i>
                                                         </div>
@@ -219,7 +214,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Musique">
                                                         <div class="icon-box">
                                                             <i class="fas fa-music"></i>
                                                         </div>
@@ -227,7 +222,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Peinture">
                                                         <div class="icon-box">
                                                             <i class="fas fa-paint-brush"></i>
                                                         </div>
@@ -235,7 +230,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Photographie">
                                                         <div class="icon-box">
                                                             <i class="fas fa-camera-retro"></i>
                                                         </div>
@@ -243,7 +238,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Lecture">
                                                         <div class="icon-box">
                                                             <i class="fas fa-book-open"></i>
                                                         </div>
@@ -251,7 +246,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Cinema">
                                                         <div class="icon-box">
                                                             <i class="fas fa-film"></i>
                                                         </div>
@@ -259,7 +254,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Chill">
                                                         <div class="icon-box">
                                                             <i class="fas fa-glass-cheers"></i>
                                                         </div>
@@ -267,7 +262,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Shopping">
                                                         <div class="icon-box">
                                                             <i class="fas fa-shopping-cart"></i>
                                                         </div>
@@ -275,7 +270,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Voyages">
                                                         <div class="icon-box">
                                                             <i class="fas fa-plane" aria-hidden="true"></i>
                                                         </div>
@@ -283,7 +278,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Jardinage">
                                                         <div class="icon-box">
                                                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
                                                         </div>
@@ -291,7 +286,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Cuisine">
                                                         <div class="icon-box">
                                                             <i class="fa fa-battery-full" aria-hidden="true"></i>
                                                         </div>
@@ -299,7 +294,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Reseaux sociaux">
                                                         <div class="icon-box">
                                                             <i class="fa fa-code" aria-hidden="true"></i>
                                                         </div>
@@ -307,7 +302,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Coiffure">
                                                         <div class="icon-box">
                                                             <i class="fa fa-home" aria-hidden="true"></i>
                                                         </div>
@@ -315,7 +310,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Ecriture">
                                                         <div class="icon-box">
                                                             <i class="fa fa-phone" aria-hidden="true"></i>
                                                         </div>
@@ -323,7 +318,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Chasse">
                                                         <div class="icon-box">
                                                             <i class="fa fa-plane" aria-hidden="true"></i>
                                                         </div>
@@ -331,7 +326,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Danse">
                                                         <div class="icon-box">
                                                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
                                                         </div>
@@ -339,7 +334,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Couture">
                                                         <div class="icon-box">
                                                             <i class="fa fa-battery-full" aria-hidden="true"></i>
                                                         </div>
@@ -347,7 +342,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Equitation">
                                                         <div class="icon-box">
                                                             <i class="fa fa-code" aria-hidden="true"></i>
                                                         </div>
@@ -355,7 +350,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Pêche">
                                                         <div class="icon-box">
                                                             <i class="fa fa-home" aria-hidden="true"></i>
                                                         </div>
@@ -363,7 +358,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Poterie">
                                                         <div class="icon-box">
                                                             <i class="fa fa-phone" aria-hidden="true"></i>
                                                         </div>
@@ -371,7 +366,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Technologie">
                                                         <div class="icon-box">
                                                             <i class="fa fa-plane" aria-hidden="true"></i>
                                                         </div>
@@ -379,7 +374,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Mode">
                                                         <div class="icon-box">
                                                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
                                                         </div>
@@ -387,7 +382,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Boxe">
                                                         <div class="icon-box">
                                                             <i class="fa fa-battery-full" aria-hidden="true"></i>
                                                         </div>
@@ -395,7 +390,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Football">
                                                         <div class="icon-box">
                                                             <i class="fa fa-code" aria-hidden="true"></i>
                                                         </div>
@@ -403,7 +398,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Jeux de societe">
                                                         <div class="icon-box">
                                                             <i class="fa fa-home" aria-hidden="true"></i>
                                                         </div>
@@ -411,7 +406,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Dessin">
                                                         <div class="icon-box">
                                                             <i class="fa fa-phone" aria-hidden="true"></i>
                                                         </div>
@@ -419,7 +414,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Tenis">
                                                         <div class="icon-box">
                                                             <i class="fa fa-plane" aria-hidden="true"></i>
                                                         </div>
@@ -427,7 +422,7 @@ of Simple CSS Waves-->
                                                 </li>
                                                 <li>
                                                     <label>
-                                                        <input type="checkbox" name="">
+                                                        <input type="checkbox" name="hobbies[]" value="Natation">
                                                         <div class="icon-box">
                                                             <i class="fa fa-snowflake-o" aria-hidden="true"></i>
                                                         </div>

@@ -1,14 +1,44 @@
 <div class="container">
     <div class="main-body">
-        <div class="row my-2"><img class="social-cover" src="./uploads/<?= $current_user_photo_de_couverture ?>" alt="">
+        <div class="row my-2">
+            <?php
+                if(empty($current_user_photo_de_couverture)){
+                    ?>
+                        <img src="./img/default_pc.jpg" alt="photo_couverture" class="social-cover">
+                    <?php
+                } else {
+                    ?>
+                        <img src="./uploads/<?= $current_user_photo_de_couverture ?>" alt="photo_couverture" class="social-cover">
+                    <?php
+                }
+                
+            ?>
         </div>
         <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body p-4">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="./uploads/<?= $current_user_photo_de_profil ?>" alt="Admin" class="rounded-circle"
-                                width="150">
+                            <?php
+                                if(empty($current_user_photo_de_profil)){
+                                    if ($current_user_sexe == "M") {
+                                        ?>
+                                            <img src="./img/male.jpg" alt="Admin" class="rounded-circle" width="150" id="photo_profil">
+                                        <?php
+                                    } else {
+                                        ?>
+                                            <img src="./img/female.jpg" alt="Admin" class="rounded-circle" width="150" id="photo_profil">
+                                        <?php
+                                    }
+                                    
+                                    
+                                } else {
+                                    ?>
+                                        <img src="./uploads/<?= $current_user_photo_de_profil ?>" alt="Admin" class="rounded-circle" width="150" id="photo_profil">
+                                    <?php
+                                }
+                                
+                            ?>
                             <div class="mt-3">
                                 <h4>
                                     <?= $current_user_firstname." ".$current_user_lastname?>
@@ -40,16 +70,28 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0"><i class="fab fa-facebook-square fa-lg mx-1 text-primary"></i>Facebook
                             </h6>
-                            <span class="text-secondary"><?= $current_user_compte_facebook ?></span>
+                            <span class="text-secondary">
+                                <a href="https://www.facebook.com/<?= $current_user_compte_facebook ?>">
+                                    <?= $current_user_compte_facebook ?>
+                                </a>
+                            </span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0"><i class="fab fa-instagram-square fa-lg mx-1 text-danger"></i>Instagram
                             </h6>
-                            <span class="text-secondary">https://www.instagram.com/<?= $current_user_compte_instagram ?></span>
+                            <span class="text-secondary">
+                                <a href="https://www.instagram.com/<?= $current_user_compte_instagram ?>">
+                                    <?= $current_user_compte_instagram ?>
+                                </a>  
+                            </span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                             <h6 class="mb-0"><i class="fab fa-twitter-square fa-lg mx-1 text-info"></i>Twitter</h6>
-                            <span class="text-secondary">https://www.twitter.com/<?= $current_user_compte_twitter ?></span>
+                            <span class="text-secondary">
+                                <a href="https://www.twitter.com/<?= $current_user_compte_twitter ?>">
+                                    <?= $current_user_compte_twitter ?>
+                                </a>
+                            </span>
                         </li>
 
 

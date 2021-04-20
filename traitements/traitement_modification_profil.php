@@ -4,13 +4,11 @@ include "../includes/config_db.php";
 
 $nom = $_POST["nom"];
 $prenoms = $_POST["prenoms"];
-//$sexe = $_POST["sexe"];
 $date_de_naissance = $_POST["date_de_naissance"];
 
 $adresse_email = $_POST["email"];
 $pseudo = $_SESSION["current_user_pseudo"];
 
-//$mot_de_passe = $_POST["confirmation_mdp"];
 $lieu_d_habitation = $_POST["lieu_d_habitation"];
 $profession = $_POST["profession"];
 $compte_facebook = $_POST["compte_facebook"];
@@ -79,23 +77,21 @@ try {
     echo $request;
 
 
-    //$_SESSION["current_user_pseudo"]= $pseudo;
     $_SESSION["current_user_lastname"]= $nom;
     $_SESSION["current_user_firstname"]= $prenoms;
-    //$_SESSION["current_user_sexe"]= $sexe;
     $_SESSION["current_user_date_de_naissance"]= $date_de_naissance;
     $_SESSION["current_user_adresse_email"]= $adresse_email;
     $_SESSION["current_user_photo_de_profil"]= $photo_de_profil;
     $_SESSION["current_user_photo_de_couverture"]= $photo_de_couverture;
     $_SESSION["current_user_bio"]= stripslashes($bio);
     $_SESSION["current_user_raison"]= $_SESSION["ref_raison"][$raison];
-    //$_SESSION["current_user_hobbies"]= $hobbies;
     $_SESSION["current_user_profession"]= $profession;
     $_SESSION["current_user_lieu_habitation"]= $lieu_d_habitation;
     $_SESSION["current_user_compte_facebook"]= $compte_facebook;
     $_SESSION["current_user_compte_instagram"]= $compte_instagram;
     $_SESSION["current_user_compte_twitter"]= $compte_twitter;
     header("Location:../acc_user.php?page=my_profile");
+    header("Refresh:0");
 } catch (Exception $e) {
     echo ("Impossible de traiter les données. Erreur : " . $e->getMessage());
 }

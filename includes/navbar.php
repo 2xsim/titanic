@@ -182,8 +182,26 @@
                 <a class="nav-link dropdown-toggle d-flex align-items-center" id="avatar" href="#"
                     id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                     <strong class="d-none d-sm-block mx-2"><?= $current_user_pseudo ?></strong>
-                    <img src="./uploads/<?= $current_user_photo_de_profil ?>" class="rounded-circle bg-white"
-                        height="26" alt="" loading="lazy" />
+                    <?php
+                        if(empty($current_user_photo_de_profil)){
+                            if ($current_user_sexe == "M") {
+                                ?>
+                                    <img src="./img/male.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                                <?php
+                            } else {
+                                ?>
+                                    <img src="./img/female.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                                <?php
+                            }
+                            
+                            
+                        } else {
+                            ?>
+                                <img src="./uploads/<?= $current_user_photo_de_profil ?>" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                            <?php
+                        }
+                        
+                    ?>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item d-flex align-items-center justify-content-center"
@@ -220,7 +238,7 @@
         <!-- Left elements -->
         <div class="d-flex">
             <!-- Brand -->
-            <a class="navbar-brand nav-link disabled" href="acc_user.php">
+            <a class="navbar-brand nav-link disabled" href="new_user.php">
                 <strong>Titanic</strong>
             </a>
 
@@ -278,8 +296,26 @@
                 <a class="nav-link dropdown-toggle d-flex align-items-center disabled" href="#"
                     id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                     <strong class="d-none d-sm-block mx-2"><?= $current_user_pseudo ?></strong>
-                    <img src="./uploads/<?= $current_user_photo_de_profil ?>" class="rounded-circle bg-white"
-                        height="26" alt="" loading="lazy" />
+                    <?php
+                        if(empty($current_user_photo_de_profil)){
+                            if ($current_user_sexe == "M") {
+                                ?>
+                                    <img src="./img/male.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                                <?php
+                            } else {
+                                ?>
+                                    <img src="./img/female.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                                <?php
+                            }
+                            
+                            
+                        } else {
+                            ?>
+                                <img src="./uploads/<?= $current_user_photo_de_profil ?>" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                            <?php
+                        }
+                        
+                    ?>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item d-flex align-items-center justify-content-center"

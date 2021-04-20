@@ -24,12 +24,31 @@
 
                             <div class="d-flex flew-row mt-3">
                                 <div class="card-body d-flex media align-items-center">
-                                    <img src="./uploads/<?= $current_user_photo_de_profil ?>" alt="photo_profil"
-                                        class="d-block ui-w-80" id="photo_profil">
+                                    <?php
+                                        if(empty($current_user_photo_de_profil)){
+                                            if ($current_user_sexe == "M") {
+                                                ?>
+                                                    <img src="./img/male.jpg" alt="photo_profil" class="d-block ui-w-80" id="photo_profil">
+                                                <?php
+                                            } else {
+                                                ?>
+                                                    <img src="./img/female.jpg" alt="photo_profil" class="d-block ui-w-80" id="photo_profil">
+                                                <?php
+                                            }
+                                            
+                                            
+                                        } else {
+                                            ?>
+                                                <img src="./uploads/<?= $current_user_photo_de_profil ?>" alt="photo_profil" class="d-block ui-w-80" id="photo_profil">
+                                            <?php
+                                        }
+                                        
+                                    ?>
+                                    
                                     <div class="media-body ms-4">
                                         <label class="btn btn-primary">
                                             Nouvelle photo de profil
-                                            <input type="file" class="account-settings-fileinput" name="photo_de_profil" accept="image/*" onchange="showPreview_pp(event);">
+                                            <input type="file" class="account-settings-fileinput" name="photo_de_profil" accept="image/*" onchange="show_pp(event);">
                                         </label> &nbsp;
 
                                         <div class="text-light small mt-1">Seulement JPG, GIF ou PNG. Max size of 800K</div>
@@ -37,13 +56,25 @@
                                 </div>
 
                                 <div class="card-body d-flex media align-items-center">
-                                    <img src="./uploads/<?= $current_user_photo_de_couverture ?>" alt="photo_couverture" class="d-block ui-w-150" id="photo_de_couverture">
+                                    <?php
+                                        if(empty($current_user_photo_de_couverture)){
+                                            ?>
+                                                <img src="./img/default_pc.jpg" alt="photo_couverture" class="d-block ui-w-150" id="photo_de_couverture">
+                                            <?php
+                                        } else {
+                                            ?>
+                                                <img src="./uploads/<?= $current_user_photo_de_couverture ?>" alt="photo_couverture" class="d-block ui-w-150" id="photo_de_couverture">
+                                            <?php
+                                        }
+                                        
+                                    ?>
+                                    
                                     <div class="media-body ms-4">
                                         <label class="btn btn-primary">
                                             Nouvelle photo de couverture
-                                            <input type="file" class="account-settings-fileinput" name="photo_de_couverture" accept="image/*" onchange="showPreview_pc(event);">
+                                            <input type="file" class="account-settings-fileinput" name="photo_de_couverture" accept="image/*" onchange="show_pc(event);">
                                         </label> &nbsp;
-                                        <button type="button" class="btn btn-default md-btn-flat">Supprimer</button>
+                                        <input type="button" class="btn btn-default md-btn-flat" value="Supprimer" id="supprimer_pc">
 
                                         <div class="text-light small mt-1">Seulement JPG, GIF ou PNG. Max size of 800K</div>
                                     </div>
@@ -219,6 +250,23 @@
                     data: "nouveau_mdp=" + encodeURIComponent(nouveau_mdp),
                     success: function(resultat) {
                         if (resultat == "Success") {
+                            location.reload(true);
+                        } else {
+                            alert("Erreur");
+                        }
+                    }
+                })
+        });
+
+        $("#supprimer_pc").click(function() {
+            $.ajax({
+                    type: 'GET',
+                    url: 'traitements/traitement_suppression_pc.php',
+                    success: function(resultat) {
+                        if (resultat == "Success") {
+                            var src = "./img/default_pc.jpg";
+                            var preview = document.getElementById("photo_de_couverture");
+                            preview.src = src;
                             location.reload(true);
                         } else {
                             alert("Erreur");
