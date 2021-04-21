@@ -186,38 +186,34 @@
                         if(empty($current_user_photo_de_profil)){
                             if ($current_user_sexe == "M") {
                                 ?>
-                                    <img src="./img/male.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
-                                <?php
+                    <img src="./img/male.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                    <?php
                             } else {
                                 ?>
-                                    <img src="./img/female.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
-                                <?php
+                    <img src="./img/female.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                    <?php
                             }
                             
                             
                         } else {
                             ?>
-                                <img src="./uploads/<?= $current_user_photo_de_profil ?>" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
-                            <?php
+                    <img src="./uploads/<?= $current_user_photo_de_profil ?>" class="rounded-circle bg-white"
+                        height="26" alt="" loading="lazy">
+                    <?php
                         }
                         
                     ?>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                     <li><a class="dropdown-item d-flex align-items-center justify-content-center"
-                            href="?page=my_profile"><span class="material-icons me-1">
-                                person
-                            </span>Mon
+                            href="?page=my_profile"><i class="fas fa-user fa-lg me-1"></i>Mon
                             profil</a></li>
                     <li><a class="dropdown-item d-flex align-items-center justify-content-center"
-                            href="?page=settings"><span class="material-icons me-1">
-                                settings
-                            </span>Paramètres</a></li>
+                            href="?page=settings"><i class="fas fa-cog fa-lg me-1"></i>Paramètres</a></li>
                     <li class="divider dropdown-divider"></li>
-                    <li><a class="dropdown-item d-flex align-items-center justify-content-center" href="traitements/traitement_deconnexion.php"><span
-                                class="material-icons-outlined me-1">
-                                power_settings_new
-                            </span>Déconnexion</a>
+                    <li><a class="dropdown-item d-flex align-items-center justify-content-center"
+                            href="traitements/traitement_deconnexion.php"><i
+                                class="fas fa-power-off fa-lg me-1"></i>Déconnexion</a>
                     </li>
                 </ul>
             </li>
@@ -300,19 +296,20 @@
                         if(empty($current_user_photo_de_profil)){
                             if ($current_user_sexe == "M") {
                                 ?>
-                                    <img src="./img/male.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
-                                <?php
+                    <img src="./img/male.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                    <?php
                             } else {
                                 ?>
-                                    <img src="./img/female.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
-                                <?php
+                    <img src="./img/female.jpg" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
+                    <?php
                             }
                             
                             
                         } else {
                             ?>
-                                <img src="./uploads/<?= $current_user_photo_de_profil ?>" class="rounded-circle bg-white" height="26" alt="" loading="lazy">
-                            <?php
+                    <img src="./uploads/<?= $current_user_photo_de_profil ?>" class="rounded-circle bg-white"
+                        height="26" alt="" loading="lazy">
+                    <?php
                         }
                         
                     ?>
