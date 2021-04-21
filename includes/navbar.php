@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <!-- Navbar brand -->
         <a class="navbar-brand nav-link" href="index.php">
-            <strong>Titanic</strong>
+            <span style="font-family: 'Cinzel' , serif;">Titanic</span>
         </a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
             aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,7 @@
     <div class="container-fluid">
         <!-- Navbar brand -->
         <a class="navbar-brand nav-link" href="index.php">
-            <strong>Titanic</strong>
+            <span style="font-family: 'Cinzel' , serif;">Titanic</span>
         </a>
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
             aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,7 +122,7 @@
         <div class="d-flex">
             <!-- Brand -->
             <a class="navbar-brand nav-link" href="acc_user.php">
-                <strong>Titanic</strong>
+                <span style="font-family: 'Cinzel' , serif;">Titanic</span>
             </a>
 
             <!-- Search form -->
