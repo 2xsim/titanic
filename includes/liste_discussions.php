@@ -1,10 +1,16 @@
 <?php
     while ($row = mysqli_fetch_assoc($resultat)) {
+        if(empty($row['photo_de_profil'])){
+            $pp = "../img/male.jpg";
+        } else {
+            $pp =$row['photo_de_profil'];
+        }
+            
         $output .= "
                     <a href='acc_user.php?page=chat&pseudo_interlocuteur=".$row['pseudo']."' class='list-group-item list-group-item-action list-group-item-light rounded-0'>
                         <div class='d-flex'>
                             <div class='flex-shrink-0'><img
-                                    src='./uploads/".$row['photo_de_profil']."'
+                                    src='./uploads/".$pp."'
                                     alt='user' width='50' class='rounded-circle' /></div>
                             <div class='flex-grow-1 ms-4'>
                                 <div class='d-flex align-items-center justify-content-between mb-3'>

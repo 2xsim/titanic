@@ -142,7 +142,7 @@
             <li class="nav-item mx-1">
                 <form id="search_form" action="">
                     <input id=search_input type="search">
-                    <i class="fa fa-search"></i>
+                    <i class="fa fa-search" id="loupe"></i>
                 </form>
             </li>
 
