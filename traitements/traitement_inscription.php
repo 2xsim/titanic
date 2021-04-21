@@ -68,7 +68,7 @@ if (isset($_POST["soumettre"])) {
 
 
 try {
-    $request = "INSERT INTO users (pseudo, nom, prenoms, sexe, date_de_naissance, adresse_email, mot_de_passe, photo_de_profil, photo_de_couverture, bio, raison) VALUES ('$pseudo', '$nom', '$prenoms', '$sexe', '$date_de_naissance', '$adresse_email', '$mot_de_passe', '$photo_de_profil', '$photo_de_couverture', '$bio', '$raison')" ;
+    $request = "INSERT INTO users (pseudo, nom, prenoms, sexe, date_de_naissance, adresse_email, mot_de_passe, photo_de_profil, photo_de_couverture, bio, raison, statut) VALUES ('$pseudo', '$nom', '$prenoms', '$sexe', '$date_de_naissance', '$adresse_email', '$mot_de_passe', '$photo_de_profil', '$photo_de_couverture', '$bio', '$raison', '1')" ;
     mysqli_query($chConnect, $request);
     echo $request;
 
@@ -83,6 +83,7 @@ try {
     $_SESSION["current_user_photo_de_couverture"]= $photo_de_couverture;
     $_SESSION["current_user_bio"]= stripslashes($bio);
     $_SESSION["current_user_raison"]= $_SESSION["ref_raison"][$raison];
+    $_SESSION["current_user_statut"]= "1";
     header("Location:../new_user.php");
 } catch (Exception $e) {
     echo ("Impossible de traiter les données. Erreur : " . $e->getMessage());

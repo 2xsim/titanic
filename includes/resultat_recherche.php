@@ -24,6 +24,19 @@
                 if(empty($row[7])){
                     $row[7] = "../img/male.jpg";
                 }
+
+                if ($row[3] == "M") {
+                    $row[3] = '<i class="fas fa-mars fa-lg text-primary"></i>';
+                    
+                }else{
+                    $row[3] = '<i class="fas fa-venus fa-lg text-danger"></i>';
+                }
+
+                if (!empty($row[17])) {
+                    $row[17] = '<i class="fas fa-circle text-success"></i>';
+                } else {
+                    $row[17] = '';
+                }
                 ?>
             <div class="col-lg-3">
                 <div class="text-center card-box mb-4">
@@ -31,9 +44,9 @@
                         <div class="thumb-lg member-thumb mx-auto"><img src="./uploads/<?= $row[7] ?>"
                                 class="rounded-circle img-thumbnail" alt="profile-image"></div>
                         <div class="mt-2">
-                            <h4><?= $row[2]." ".$row[1]?></h4>
+                            <h4><?= $row[2]." ".$row[1]." ".$row[3]?></h4>
                             <p><span><a href="?page=user&user_pseudo=<?= $row[0] ?>"
-                                        class="text-danger"><?= $row[0] ?></a></span></p>
+                                        class="text-danger"><?= $row[0]." ".$row[17] ?></a></span></p>
                         </div>
                         <ul class="social-links list-inline">
                             <?php

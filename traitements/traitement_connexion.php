@@ -23,6 +23,10 @@
         $userpassword = $row["mot_de_passe"];
 
         if ($userpassword == $password_saisi) {
+            $current_user_pseudo = $row["pseudo"];
+            $request = "UPDATE users SET statut= '1' WHERE `users`.`pseudo` = '$current_user_pseudo';" ;
+            mysqli_query( $chConnect, $request);
+            
             $_SESSION["current_user_pseudo"]= $row["pseudo"];
             $_SESSION["current_user_lastname"]= $row["nom"];
             $_SESSION["current_user_firstname"]= $row["prenoms"];
@@ -40,6 +44,7 @@
             $_SESSION["current_user_compte_facebook"]= $row["compte_facebook"];
             $_SESSION["current_user_compte_instagram"]= $row["compte_instagram"];
             $_SESSION["current_user_compte_twitter"]= $row["compte_twitter"];
+            $_SESSION["current_user_statut"]= "1";
             echo "Authentification Success";
         } else {
             echo "Connexion impossible";
