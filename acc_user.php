@@ -21,6 +21,7 @@
         $current_user_compte_facebook = $_SESSION["current_user_compte_facebook"];
         $current_user_compte_instagram = $_SESSION["current_user_compte_instagram"];
         $current_user_compte_twitter = $_SESSION["current_user_compte_twitter"];
+        $statut = $_SESSION["current_user_statut"];
     }
     ?>
 

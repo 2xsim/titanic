@@ -5,7 +5,13 @@
         } else {
             $pp =$row['photo_de_profil'];
         }
-            
+        
+        if (!empty($row['statut'])) {
+            $statut = '<i class="fas fa-circle text-success"></i>';
+        } else {
+            $statut = '';
+        }
+        
         $output .= "
                     <a href='acc_user.php?page=chat&pseudo_interlocuteur=".$row['pseudo']."' class='list-group-item list-group-item-action list-group-item-light rounded-0'>
                         <div class='d-flex'>
@@ -15,7 +21,7 @@
                             <div class='flex-grow-1 ms-4'>
                                 <div class='d-flex align-items-center justify-content-between mb-3'>
                                     <h6 class='mb-0'>".$row['nom']." ".$row['prenoms']."</h6>
-                                    <small class='small font-weight-bold'>21 Aug</small>
+                                    <small class='small font-weight-bold'>".$statut."</small>
                                 </div>
                                 <p class='font-italic text-muted mb-0 text-small'>
                                     Lorem ipsum dolor sit amet,
