@@ -68,11 +68,10 @@
                                 
                             ?>
                         </ul>
-                        <button type="button" class="button btn-lg btn-primary px-4 p-2 mt-3" data-toggle="modal"
-                            data-target="#modal_chat"><i class="fas fa-comments fa-lg me-2"></i>Chatter</button>
-                        <?php
-                            include("./includes/modal_chat.php");
-                        ?>
+                        <a href="?page=user&user_pseudo=<?= $row[0] ?>">
+                            <button type="button" class="button btn-lg btn-primary px-4 p-2 mt-3" data-toggle="modal"
+                            ><i class="fas fa-comments fa-lg me-2"></i>Visiter le profil</button>    
+                        </a>
                         <div class="mt-2">
                             <div class="row">
                                 <div class="col-3">
