@@ -14,6 +14,8 @@
         if(mysqli_num_rows($resultat) > 0){
             while($row = mysqli_fetch_assoc($resultat)){
                 if($row['pseudo_from'] == $pseudo_from){
+                    $row['date'] = date("d/m/Y", strtotime($row['date']));
+                    $row['heure'] = date("G:i", strtotime($row['heure']));
                     $output .= '<div class="d-flex justify-content-end ms-5 mb-3">
                                     <div class="text-end">
                                         <div class="bg-success rounded py-2 px-3 mb-2">
@@ -22,7 +24,7 @@
                                             </p>
                                         </div>
                                         <p class="small text-muted">
-                                            12:00 PM | Aug 13
+                                        '. $row['heure'] .' | '. $row['date'] .'
                                         </p>
                                     </div>
                                 </div>';
@@ -38,7 +40,7 @@
                                             </p>
                                         </div>
                                         <p class="small text-muted">
-                                            12:00 PM | Aug 13
+                                        '. $row['heure'] .' | '. $row['date'] .'
                                         </p>
                                     </div>
                                 </div>';
