@@ -20,6 +20,14 @@
             $user_photo_de_couverture = $result[8];
             $user_bio = $result[9];
             $user_raison = $_SESSION["ref_raison"][$result[10]];
+            $user_hobbies = $result[11];
+            $user_profession = $result[12];
+            $user_lieu_habitation = $result[13];
+            $user_compte_facebook = $result[14];
+            $user_compte_instagram = $result[15];
+            $user_compte_twitter = $result[16];
+            $user_statut = $result[17];
+
         }else {
             # code...
             header("Location: acc_user.php?page=user");
@@ -33,14 +41,45 @@
 
 <div class="container">
     <div class="main-body">
-        <div class="row my-2"><img class="social-cover" src="./uploads/<?= $user_photo_de_couverture ?>" alt=""></div>
+        <div class="row my-2">
+            <?php
+                if(empty($user_photo_de_couverture)){
+                    ?>
+                        <img src="./img/default_pc.jpg" alt="photo_couverture" class="social-cover">
+                    <?php
+                } else {
+                    ?>
+                        <img src="./uploads/<?= $user_photo_de_couverture ?>" alt="photo_couverture" class="social-cover">
+                    <?php
+                }
+                
+            ?>
+        </div>
         <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <div class="card-body p-4">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="./uploads/<?= $user_photo_de_profil ?>" alt="Admin"
-                                class="rounded-circle" width="150">
+                            <?php
+                                if(empty($user_photo_de_profil)){
+                                    if ($user_sexe == "M") {
+                                        ?>
+                                            <img src="./img/male.jpg" alt="Admin" class="rounded-circle" width="150" id="photo_profil">
+                                        <?php
+                                    } else {
+                                        ?>
+                                            <img src="./img/female.jpg" alt="Admin" class="rounded-circle" width="150" id="photo_profil">
+                                        <?php
+                                    }
+                                    
+                                    
+                                } else {
+                                    ?>
+                                        <img src="./uploads/<?= $user_photo_de_profil ?>" alt="Admin" class="rounded-circle" width="150" id="photo_profil">
+                                    <?php
+                                }
+                                
+                            ?>
                             <div class="mt-3">
                                 <h4>
                                     <?= $user_firstname." ".$user_lastname?>
@@ -56,8 +95,8 @@
                                         }
                                     ?>
                                 </h4>
-                                <p class="text-secondary mb-1">Etudiant</p>
-                                <p class="text-muted font-size-sm">Marrakech, Maroc</p>
+                                <p class="text-secondary mb-1"><?= $user_profession ?></p>
+                                <p class="text-muted font-size-sm"><?= $user_lieu_habitation ?></p>
                                 <button class="btn btn-primary" data-toggle="modal"
                                     data-target="#modal_chat">Message</button>
                                 <?php
@@ -73,20 +112,38 @@
                             <h6 class="mb-0"><i class="fas fa-user-circle fa-lg mx-1"></i>Nom d'utilisateur</h6>
                             <span class="text-secondary">@<?= $user_pseudo ?></span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><i class="fab fa-facebook-square fa-lg mx-1 text-primary"></i>Facebook
-                            </h6>
-                            <span class="text-secondary">-</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><i class="fab fa-instagram-square fa-lg mx-1 text-danger"></i>Instagram
-                            </h6>
-                            <span class="text-secondary">-</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            <h6 class="mb-0"><i class="fab fa-twitter-square fa-lg mx-1 text-info"></i>Twitter</h6>
-                            <span class="text-secondary">-</span>
-                        </li>
+                        
+                        <?php
+                            if (!empty($user_compte_facebook)) {
+                                ?>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                        <h6 class="mb-0"><i class="fab fa-facebook-square fa-lg mx-1 text-primary"></i>Facebook
+                                        </h6>
+                                        <span class="text-secondary"><a href="https://www.facebook.com/<?= $user_compte_facebook ?>"><?= $user_compte_facebook ?></a></span>
+                                    </li>
+                                <?php
+                            }
+
+                            if (!empty($user_compte_instagram)) {
+                                ?>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                        <h6 class="mb-0"><i class="fab fa-instagram-square fa-lg mx-1 text-danger"></i>Instagram
+                                        </h6>
+                                        <span class="text-secondary"><a href="https://www.instagram.com/<?= $user_compte_instagram ?>"><?= $user_compte_instagram ?></a></span>
+                                    </li>
+                                <?php
+                            }
+
+                            if (!empty($user_compte_twitter)) {
+                                ?>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                        <h6 class="mb-0"><i class="fab fa-twitter-square fa-lg mx-1 text-info"></i>Twitter</h6>
+                                        <span class="text-secondary"><a href="https://www.twitter.com/<?= $user_compte_twitter ?>"><?= $user_compte_twitter ?></a></span>
+                                    </li>
+                                <?php
+                            }
+                            
+                        ?>
 
 
                     </ul>
@@ -160,10 +217,14 @@
                                 <hr>
                                 <h6><i class="fab fa-gratipay text-danger fa-lg me-1"></i>Hobbies</h6>
                                 <ul>
-                                    <li>Viverra tellus non</li>
-                                    <li>Maecenas nec augue
-                                        placerat</li>
-                                    <li>Pulvinar risus</li>
+                                    <?php
+                                        $hobbies = explode(",", $user_hobbies);
+                                        foreach ($hobbies as $key => $value) {
+                                            ?>
+                                                <li><?= $value ?></li>
+                                            <?php
+                                        }
+                                    ?>
                                 </ul>
                             </div>
                         </div>
