@@ -10,25 +10,8 @@
         <a class="navbar-brand nav-link" href="index.php">
             <span style="font-family: 'Cinzel' , serif;">Titanic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-            aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarExample01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" aria-current="page" href="">Témoignages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Qui sommes-nous ?</a>
-                </li>
-            </ul>
-
-
-            <a class="btn btn-outline-light btn-rounded" href="connexion.php">Se connecter
-            </a>
-
-        </div>
+        <a class="btn btn-light btn-rounded" href="connexion.php"> <b>Se connecter</b>
+        </a>
     </div>
 </nav>
 
@@ -45,25 +28,9 @@
         <a class="navbar-brand nav-link" href="index.php">
             <span style="font-family: 'Cinzel' , serif;">Titanic</span>
         </a>
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-            aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarExample01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" aria-current="page" href="">Témoignages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Qui sommes-nous ?</a>
-                </li>
-            </ul>
 
-
-            <a class="btn btn-outline-light btn-rounded" href="inscription.php">S'inscrire
-            </a>
-
-        </div>
+        <a class="btn btn-light btn-rounded" href="inscription.php"> <b>S'inscrire</b>
+        </a>
     </div>
 </nav>
 
