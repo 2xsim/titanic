@@ -167,7 +167,7 @@ session_start();
                                                     <span class="input_border"></span>
                                                 </label>
                                             </div>
-                                            <div id="texte_alternatif">
+                                            <div id="texte_alternatif" class="text-center">
                                             </div>
                                             <!-- Mot de passe input -->
                                             <div class="form-outline text-center mb-4">
@@ -256,13 +256,13 @@ session_start();
                                                         <option value="" disabled="disabled" selected="selected">
                                                             Raison
                                                         </option>
-                                                        <option value="1">Relation sérieuse</option>
-                                                        <option value="2">Coup d'un soir</option>
-                                                        <option value="3">Se faire de nouvelles connaissances</option>
-                                                        <option value="#">Four</option>
-                                                        <option value="#">Five</option>
-                                                        <option value="#">Six</option>
-                                                        <option value="#">Seven</option>
+                                                        <option value="1">Célibataire en quête d'amour</option>
+                                                        <option value="2">Recherche un cavalier pour une cérémonie
+                                                        </option>
+                                                        <option value="3">Juste envie d'une aventure</option>
+                                                        <option value="4">Envie d'un date</option>
+                                                        <option value="5">Recherche un(e) ami(e) ou plus si affinités
+                                                        </option>
                                                     </select>
                                                     <svg>
                                                         <use xlink:href="#select-arrow-down"></use>
@@ -332,10 +332,10 @@ session_start();
                     success: function(resultat) {
                         if (resultat != "") {
                             document.getElementById('texte_alternatif').innerHTML =
-                                "<p>pseudo invalide</p>";
+                                "<p class='text-danger'>Pseudo invalide</p>";
                         } else {
                             document.getElementById('texte_alternatif').innerHTML =
-                                "<p>pseudo valide</p>";
+                                "<p class='text-success'>Pseudo valide</p>";
                         }
                     }
                 })

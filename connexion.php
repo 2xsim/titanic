@@ -77,14 +77,10 @@
                                             Se souvenir
                                         </label>
                                     </div>
-                                    <div id="texte_alternatif">
 
-                                    </div>
                                 </div>
-
-                                <div class="col text-center">
-                                    <!-- Simple link -->
-                                    <a href="#!">Mot de passe oublié ?</a>
+                                <div id="texte_alternatif" class="col text-center text-danger">
+                                    <p></p>
                                 </div>
                             </div>
                             <hr>
