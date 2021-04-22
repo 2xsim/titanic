@@ -29,173 +29,78 @@
         </div>
 
         <div class="col-7 px-0">
-            <div class="px-4 py-5 chat-box bg-light">
-        <?php
-            if (isset($_GET["pseudo_interlocuteur"])) {
-                ?>
-                
-                        <!-- Sender Message-->
-                        <div class="d-inline-flex me-5 mb-3">
-                            <div class="flex-shrink-0"><img
-                                    src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user"
-                                    width="50" class="rounded-circle" /></div>
-                            <div class="flex-grow-1 ms-3">
-                                <div class="bg-dark rounded py-2 px-3 mb-2">
-                                    <p class="text-small mb-0 text-light">
-                                        Le 11, pour faire référence à un joueur très perfomant qu'on connaît bien,
-                                        cet homme n'est pas prêt à s'attacher et multiplie les conquêtes sur courtes durées. Il
-                                        maitrîse
-                                        bien son sujet et vous en dira surement plus lors de nos ateliers. Chacun ses vices et
-                                        ses
-                                        délires !
-                                    </p>
-                                </div>
-                                <p class="small text-muted">
-                                    12:00 PM | Aug 13
-                                </p>
-                            </div>
-                        </div>
+            
+            <?php
+                if (!empty($_GET["pseudo_interlocuteur"])) {
+                    ?>
+                        <div class="px-4 py-5 chat-box bg-light" id="chat_box">
 
-                        <!-- Reciever Message-->
-                        <div class="d-flex justify-content-end ms-5 mb-3">
-                            <div class="text-end">
-                                <div class="bg-success rounded py-2 px-3 mb-2">
-                                    <p class="text-small mb-0 text-white">
-                                        Test which is a new approach to have all
-                                        solutions
-                                    </p>
-                                </div>
-                                <p class="small text-muted">
-                                    12:00 PM | Aug 13
-                                </p>
-                            </div>
+                            <!-- C'est ici que seront affichés les messages de la discussion-->
+                        
                         </div>
-
-                        <!-- Sender Message-->
-                        <div class="d-inline-flex mw-75 mb-3">
-                            <div class="flex-shrink-0"><img
-                                    src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user"
-                                    width="50" class="rounded-circle" /></div>
-                            <div class="flex-grow-1 ms-3">
-                                <div class="bg-dark rounded py-2 px-3 mb-2">
-                                    <p class="text-small mb-0 text-white">
-                                        Test, which is a new approach to have
-                                    </p>
+                        <!-- Typing area -->
+                        <form action="" class="bg-light" autocomplete="off"  id="typing-area">
+                            <div class="input-group">
+                                <input type="text" class="incoming_id" name="incoming_id" value="<?= $_GET["pseudo_interlocuteur"] ?>" hidden>
+                                <input type="text" name="message" placeholder="Entrez votre message" aria-describedby="button-addon2" class="form-control rounded-0 border-0 py-4 bg-light" id="message" >
+                                <div class="input-group-append">
+                                    <button id="button-addon2" type="submit" class="btn btn-link"  disabled>
+                                        <span class="material-icons-round">
+                                            send
+                                        </span>
+                                    </button>
                                 </div>
-                                <p class="small text-muted">
-                                    12:00 PM | Aug 13
-                                </p>
                             </div>
-                        </div>
-
-                        <!-- Reciever Message-->
-                        <div class="d-flex justify-content-end ms-5 mb-3">
-                            <div class="text-end">
-                                <div class="bg-success rounded py-2 px-3 mb-2">
-                                    <p class="text-small mb-0 text-white">
-                                        Test which is a new approach to have all
-                                        solutions Test which is a new approach to have all
-                                        solutions
-                                    </p>
-                                </div>
-                                <p class="small text-muted">
-                                    12:00 PM | Aug 13
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Sender Message-->
-                        <div class="d-inline-flex me-5 mb-3">
-                            <div class="flex-shrink-0"><img
-                                    src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user"
-                                    width="50" class="rounded-circle" /></div>
-                            <div class="flex-grow-1 ms-3">
-                                <div class="bg-dark rounded py-2 px-3 mb-2">
-                                    <p class="text-small mb-0 text-light">
-                                        Le 11, pour faire référence à un joueur très perfomant qu'on connaît bien.
-                                    </p>
-                                </div>
-                                <p class="small text-muted">
-                                    12:00 PM | Aug 13
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Reciever Message-->
-                        <div class="d-flex justify-content-end ms-5 mb-3">
-                            <div class="text-end">
-                                <div class="bg-success rounded py-2 px-3 mb-2">
-                                    <p class="text-small mb-0 text-white">
-                                        Test which is a new approach to have all
-                                        solutions
-                                    </p>
-                                </div>
-                                <p class="small text-muted">
-                                    12:00 PM | Aug 13
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Sender Message-->
-                        <div class="d-inline-flex me-5 mb-3">
-                            <div class="flex-shrink-0"><img
-                                    src="https://res.cloudinary.com/mhmd/image/upload/v1564960395/avatar_usae7z.svg" alt="user"
-                                    width="50" class="rounded-circle" /></div>
-                            <div class="flex-grow-1 ms-3">
-                                <div class="bg-dark rounded py-2 px-3 mb-2">
-                                    <p class="text-small mb-0 text-light">
-                                        Le 11, pour faire référence à un joueur très perfomant qu'on connaît bien.
-                                    </p>
-                                </div>
-                                <p class="small text-muted">
-                                    12:00 PM | Aug 13
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Reciever Message-->
-                        <div class="d-flex justify-content-end ms-5 mb-3">
-                            <div class="text-end">
-                                <div class="bg-success rounded py-2 px-3 mb-2">
-                                    <p class="text-small mb-0 text-white">
-                                        Test which is a new approach to have all
-                                        solutions
-                                    </p>
-                                </div>
-                                <p class="small text-muted">
-                                    12:00 PM | Aug 13
-                                </p>
-                            </div>
-                        </div>
+                        </form>
                     
-
-                    <!-- Typing area -->
-                    <form action="#" class="bg-light">
-                        <div class="input-group">
-                            <input type="text" placeholder="Type a message" aria-describedby="button-addon2"
-                                class="form-control rounded-0 border-0 py-4 bg-light" />
-                            <div class="input-group-append">
-                                <button id="button-addon2" type="submit" class="btn btn-link">
-                                    <span class="material-icons-round">
-                                        send
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                
-                <?php
-            } else {
-                ?>
-                    <p> Veuillez sélectionner une discussion </p>
-                <?php
-            }
-        ?>
-        </div>
+                    <?php
+                } else {
+                    ?>
+                        <p> Veuillez sélectionner une discussion </p>
+                    <?php
+                }
+            ?>
+            
         </div> 
         <!-- Chat Box-->
         
     </div>
 </div>
+
+<script>
+    $("#message").keyup(function() {
+        activeModifyPasswordButton()
+    });
+
+
+    function activeModifyPasswordButton() {
+        var message = $("#message").val();
+        message = $.trim(message);
+        if (message != "") {
+            $("#button-addon2").prop("disabled", false);
+        } else {
+            $("#button-addon2").prop("disabled", true);
+        }
+
+    }
+</script>
+
+<script>
+    usersList = document.querySelector(".list-group");
+
+    setInterval(() =>{
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "traitements/traitement_select_discussions.php", true);
+        xhr.onload = ()=>{
+        if(xhr.readyState === XMLHttpRequest.DONE){
+            if(xhr.status === 200){
+                let data = xhr.response;
+                usersList.innerHTML = data;
+            }
+        }
+        }
+        xhr.send();
+    }, 500);
+</script>
 
 <script src="js/chat.js"></script>

@@ -12,8 +12,22 @@
             $statut = '';
         }
         
+        $request2 = "SELECT * FROM messagerie WHERE (pseudo_to = '".$row['pseudo']."' OR pseudo_from = '".$row['pseudo']."') AND (pseudo_from = '$current_user_pseudo' OR pseudo_to = '$current_user_pseudo') ORDER BY id_message DESC LIMIT 1";
+        $resultat2 = mysqli_query($chConnect, $request2);
+        $row2 = mysqli_fetch_assoc($resultat2);
+
+        //$tamp = $row2['message'] ;
+        (mysqli_num_rows($resultat2) > 0) ? $tamp = $row2['corps_message'] : $tamp ="Aucun message";
+        
+        (strlen($tamp) > 28) ? $message =  substr($tamp, 0, 28) . '...' : $message = $tamp;
+        if(isset($row2['pseudo_from'])){
+            ($current_user_pseudo == $row2['pseudo_from']) ? $you = "Vous: " : $you = "";
+        }else{
+            $you = "";
+        }
+        
         $output .= "
-                    <a href='acc_user.php?page=chat&pseudo_interlocuteur=".$row['pseudo']."' class='list-group-item list-group-item-action list-group-item-light rounded-0'>
+                    <a href='?page=chat&pseudo_interlocuteur=".$row['pseudo']."' class='list-group-item list-group-item-action list-group-item-light rounded-0'>
                         <div class='d-flex'>
                             <div class='flex-shrink-0'><img
                                     src='./uploads/".$pp."'
@@ -24,10 +38,7 @@
                                     <small class='small font-weight-bold'>".$statut."</small>
                                 </div>
                                 <p class='font-italic text-muted mb-0 text-small'>
-                                    Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt
-                                    ut labore.
+                                ". $you . $message ."
                                 </p>
                             </div>
                         </div>
