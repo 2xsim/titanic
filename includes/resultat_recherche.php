@@ -18,6 +18,7 @@
             # code...
         }
         ?>
+        <h2>Résultats de la recherche :</h2>
         <div class="row">
             <?php
             foreach ($result as $row) {

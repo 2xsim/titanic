@@ -143,8 +143,7 @@ session_start();
                                             <!-- Email input -->
                                             <div class="form-outline col-6 offset-md-3 mb-4">
                                                 <label for="adresse_email" class="inp">
-                                                    <input type="text" name="adresse_email" id="adresse_email"
-                                                        pattern="(\w\.?)+@[\w\.-]+\.\w{2,4}" placeholder="&nbsp;" />
+                                                    <input type="text" name="adresse_email" id="adresse_email" placeholder="&nbsp;" />
                                                     <span class="label">Adresse e-mail</span>
                                                     <svg width="120px" height="26px" viewBox="0 0 120 26">
                                                         <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
@@ -157,8 +156,7 @@ session_start();
                                             <!-- Pseudo input -->
                                             <div class="form-outline col-4 offset-md-4 mb-4">
                                                 <label for="pseudo" class="inp">
-                                                    <input type="text" name="pseudo" id="pseudo"
-                                                        pattern="[a-zA-Z0-9-_]{4, 24}" placeholder="&nbsp;" />
+                                                    <input type="text" name="pseudo" id="pseudo" placeholder="&nbsp;" />
                                                     <span class="label">Pseudo</span>
                                                     <svg width="120px" height="26px" viewBox="0 0 120 26">
                                                         <path d="M0,25 C21,25 46,25 74,25 C102,25 118,25 120,25">
@@ -173,7 +171,7 @@ session_start();
                                             <div class="form-outline text-center mb-4">
                                                 <label for="mot_de_passe" class="pass_inp">
                                                     <input type="password" id="mot_de_passe" name="mot_de_passe"
-                                                        placeholder="Mot de passe" pattern=".{8,}" required>
+                                                        placeholder="Mot de passe" required>
                                                     <svg width="280px" height="18px" viewBox="0 0 280 18"
                                                         class="password_border">
                                                         <path
@@ -191,7 +189,7 @@ session_start();
                                                 <label for="conf_mot_de_passe" class="pass_inp">
                                                     <input type="password" id="conf_mot_de_passe"
                                                         name="conf_mot_de_passe"
-                                                        placeholder="Confirmation du mot de passe" pattern=".{8,}"
+                                                        placeholder="Confirmation du mot de passe"
                                                         required>
                                                     <svg width="280px" height="18px" viewBox="0 0 280 18"
                                                         class="password_border">

@@ -15,7 +15,8 @@
 
 <div class="content">
     <div class="container-fluid p-5">
-
+        <h2>Des utilisteurs succeptibles de vous plaire :</h2>
+        <br>
         <div class="row">
         <?php
             foreach ($result as $row) {

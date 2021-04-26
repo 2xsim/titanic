@@ -17,7 +17,7 @@
         <div class="col-5 px-0">
             <div class="bg-light">
                 <div class="bg-light px-4 py-2">
-                    <p class="h5 mb-0 py-1">Recent</p>
+                    <p class="h5 mb-0 py-1">Listes des discussions</p>
                 </div>
 
                 <div class="messages-box">

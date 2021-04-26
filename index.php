@@ -73,7 +73,7 @@
                             attentes et
                             qui partagent la même vision que vous.
                             <br>
-                            Notre puissant algorithme est basée sur la
+                            Notre puissant algorithme, basé sur la
                             transparence et
                             l'envie de satisfaire saura répondre à vos attentes.
                             <br>
@@ -94,7 +94,7 @@
                         <div class="card profile-card-5 border">
                             <div class="card-img-block profile-card-2">
                                 <img class="card-img-top"
-                                    src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                                    src="img/ptz.jpg"
                                     alt="Card image cap" />
                                 <div class="profile-name">Patrick ZOUNON</div>
                                 <div class="profile-username">
@@ -125,7 +125,7 @@
                         <div class="card profile-card-5 border">
                             <div class="card-img-block profile-card-2">
                                 <img class="card-img-top"
-                                    src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                                    src="img/mike.jpg"
                                     alt="Card image cap" />
                                 <div class="profile-name">Prince SIMEDA</div>
                                 <div class="profile-username">
@@ -159,11 +159,11 @@
                         <div class="card profile-card-5 border">
                             <div class="card-img-block profile-card-2">
                                 <img class="card-img-top"
-                                    src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                                    src="img/onan.jpg"
                                     alt="Card image cap" />
                                 <div class="profile-name">Mardochée YAO</div>
                                 <div class="profile-username">
-                                    @johndoesurname
+                                    @emmanuel_millenium
                                 </div>
                                 <div class="profile-icons me-5">
                                     <ul>
@@ -194,11 +194,11 @@
                         <div class="card profile-card-5 border">
                             <div class="card-img-block profile-card-2">
                                 <img class="card-img-top"
-                                    src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                                    src="img/daisy.jpg"
                                     alt="Card image cap" />
                                 <div class="profile-name">Anne Désirée<br>ESSIS</div>
                                 <div class="profile-username">
-                                    @johndoesurname
+                                    @daisy_la_craquante
                                 </div>
                                 <div class="profile-icons me-5">
                                     <ul>
@@ -212,10 +212,7 @@
                             </div>
                             <div class="card-body pt-0">
                                 <p class="card-text">
-                                    Le Bilou, c'est comme ça que son entourage l'appelle. Ce surnom sert à
-                                    mettre l'accent sur son élégance et son habilité à la parole qui ne laisse pas
-                                    indiférentes
-                                    toutes ces femmes qu'il approche.
+                                    Daisy, déesse de la séduction. Elle compte à son actif tellement d'hommes mais n'a toujours pas trouvé l'homme idéal. Elle se livre aux plaisirs  de la chair et profite de sa vie. 
                                 </p>
                             </div>
                         </div>
@@ -225,11 +222,11 @@
                         <div class="card profile-card-5 border">
                             <div class="card-img-block profile-card-2">
                                 <img class="card-img-top"
-                                    src="http://envato.jayasankarkr.in/code/profile/assets/img/profile-2.jpg"
+                                    src="img/amichia.jpg"
                                     alt="Card image cap" />
                                 <div class="profile-name">Emmanuel AMICHIA</div>
                                 <div class="profile-username">
-                                    @johndoesurname
+                                    @amichia
                                 </div>
                                 <div class="profile-icons me-5">
                                     <ul>
@@ -259,53 +256,60 @@
             <h2>Nos conseils</h2>
         </section>
         <section id="3">
+            <h2>Témoignages</h2>
             <div class="items">
+            
                 <div class="card">
                     <div class="media media-2x1 gd-primary"> <img class="profile-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1568709978/BBBootstrap/2.jpg">
+                            src="img/couple_denzel.jpg">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Delbert Simonas</h5>
-                        <p class="card-text">"Online reviews can make or break a customer's decision to make a purchase.
-                            Read about these customer review on site"</p>
+                        <h5 class="card-title"><strong>Denzel & Prunelle</strong></h5>
+                        <p class="card-text">Titanic ! Nous n'auront jamais pu avoir cette alchimie sans cette application. </p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="media media-2x1 gd-primary"> <img class="profile-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1561869127/BBBootstrap/img-3.jpg">
+                            src="img/couple_eva.jpg">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Tikoh Amin</h5>
-                        <p class="card-text">"When you think of Apple you automatically think expensive if your anything
-                            like me. When purchasing this laptop I was skeptical."</p>
+                        <h5 class="card-title"><strong>Eva & Yacine</strong></h5>
+                        <p class="card-text">Nous n'avons pas cru à l'existence de l'âme soeur avant de rencontrer cette application.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="media media-2x1 gd-primary"> <img class="profile-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1561869127/BBBootstrap/img-2.jpg">
+                            src="img/couple_morel.jpg">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Malachi Lensing</h5>
-                        <p class="card-text">"I’ve wanted a MacBook for a while now because of the build quality and the
-                            simplicity of the OS. I spend an average 6 hours a day."</p>
+                        <h5 class="card-title"><strong>Morel & ses conquêtes</strong></h5>
+                        <p class="card-text">Comme moi, venez réaliser vos fantasmes les plus tabout dans la paix du coeur.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="media media-2x1 gd-primary"> <img class="profile-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1561869126/BBBootstrap/img-1.jpg">
+                            src="img/couple_amichia.jpg">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Christian Isla</h5>
-                        <p class="card-text">"This MacBook has excellent processing speed. The screen is crystal clear
-                            and I really enjoy the touchbar. I set it up"</p>
+                        <h5 class="card-title"><strong>Amichia & Marina</strong></h5>
+                        <p class="card-text">Bientôt le mariage, vraiment merci Titanic !</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="media media-2x1 gd-primary"> <img class="profile-image"
-                            src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1563294707/Profile/img-1.jpg">
+                            src="img/couple_onan.jpg">
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Lori Charles</h5>
+                        <h5 class="card-title"><strong>Onan & Lorraine</strong></h5>
+                        <p class="card-text">6 ans de moins mais tout autant d'amour. Malgré l'écart d'âge, nous nous aimons profondément.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="media media-2x1 gd-primary"> <img class="profile-image"
+                            src="img/couple_hubert.jpg">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Hubert & Olivia</strong></h5>
                         <p class="card-text">"For the last 10 years, I have owned an old Gateway laptop. Although it was
                             amazing and lasted me, it was time for an upgrade."</p>
                     </div>
@@ -314,6 +318,81 @@
         </section>
         <section id="4">
             <h2>Les ateliers</h2>
+            <br>
+            <br>
+            <div class="container py-5">
+                    <blockquote class="blockquote text-center text-light ">
+                        <p>
+                            
+                            <br>Chaque coach organise mensuellement des ateliers puors donner des conseils à qui les veut.
+                            <br>Veuillez donc vous informez au près d'eux pour prendre connaissance des différentes dates des ateliers.
+                            <br>
+                        </p>
+                    </blockquote>
+                </div>
+            <br>
+            <br>
+            <div class="row justify-content-center">
+                <div class="card mx-3 col">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Patrick ZOUNON</strong> </h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>+225 0747118963</li>
+                                <li>steffzounon@gmail.com</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mx-3 col">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Mike Prince SIMEDA</strong></h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>+225 0777914080</li>
+                                <li>simedaprince@gmail.com</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mx-3 col">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Mardochée YAO</strong></h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>+225 0769585617</li>
+                                <li>yaoemanuel33@gmail.com</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row justify-content-center">
+                <div class="card mx-3 col-5">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Désirée ESSIS</strong></h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>+225 0779985669</li>
+                                <li>essisdesiree@gmail.com</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mx-3 col-5">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>Emmanuel Amichia</strong></h5>
+                        <p class="card-text">
+                            <ul>
+                                <li>+225 0779843408</li>
+                                <li>amichiaemmanuel5@gmail.com</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <!-- partial -->

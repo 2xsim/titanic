@@ -13,6 +13,11 @@
 
         if(mysqli_num_rows($resultat) > 0){
             while($row = mysqli_fetch_assoc($resultat)){
+                $pp="img/male.jpg";
+                if (file_exists("../uploads/pp_".$row['pseudo_from'].".jpg")) {
+                    $pp = "uploads/pp_".$row['pseudo_from'].".jpg";
+                }
+                
                 if($row['pseudo_from'] == $pseudo_from){
                     $row['date'] = date("d/m/Y", strtotime($row['date']));
                     $row['heure'] = date("G:i", strtotime($row['heure']));
@@ -31,7 +36,7 @@
                 }else{
                     $output .= '<div class="d-flex me-5 mb-3">
                                     <div class="flex-shrink-0"><img
-                                            src="uploads/pp_'.$row['pseudo_from'].'.jpg" alt="user"
+                                            src="'.$pp.'" alt="user"
                                             width="50" class="rounded-circle" /></div>
                                     <div class="flex-grow-1 ms-3">
                                         <div class="bg-dark rounded py-2 px-3 mb-2">
@@ -47,7 +52,7 @@
                 }
             }
         }else{
-            $output .= '<div class="text">No messages are available. Once you send message they will appear here.</div>';
+            $output .= '<div class="text">Aucun message dans cette discussion. Entamez une discussion !</div>';
         }
         echo $output;
     }

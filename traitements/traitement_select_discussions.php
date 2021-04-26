@@ -2,6 +2,7 @@
     session_start();
     include_once "../includes/config_db.php";
     $current_user_pseudo = $_SESSION["current_user_pseudo"];
+    //$request = "SELECT * FROM messagerie LEFT JOIN users ON users.pseudo= messagerie.pseudo_from WHERE pseudo_from = '$current_user_pseudo' OR pseudo_to= '$current_user_pseudo'";
     $request = "SELECT * FROM users WHERE NOT pseudo = '$current_user_pseudo' ";
     $resultat = mysqli_query($chConnect, $request);
     $output = "";

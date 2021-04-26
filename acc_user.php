@@ -64,7 +64,7 @@
 
         <?php
             if (!isset($_GET['page'])) {
-                $page = "home";
+                $page = "users";
             }
             else {
                 $page = $_GET['page'];
